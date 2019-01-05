@@ -6,10 +6,17 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Binjector_CSGO_V2.Utilities
+namespace Binjector.Utilities
 {
+    // Credit to whoever made this
     public static class Memory
     {
+        [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
+        public static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint dwData, int dwExtraInfo);
+
+        [DllImport("User32.dll")]
+        public static extern short GetAsyncKeyState(System.Windows.Forms.Keys vKey);
+
         [DllImport("kernel32.dll")]
         public static extern IntPtr OpenProcess(int dwDesiredAccess, bool bInheritHandle, int dwProcessId);
 

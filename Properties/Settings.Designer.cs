@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Binjector_CSGO_V2.Properties
+namespace Binjector.Properties
 {
 
 

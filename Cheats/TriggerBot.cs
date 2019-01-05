@@ -1,24 +1,29 @@
-﻿using Binjector_CSGO_V2.Utilities;
+﻿using Binjector.Classes;
+using Binjector.Utilities;
 using System;
 using System.Threading;
 
-namespace Binjector_CSGO_V2.Cheats
+namespace Binjector.Cheats
 {
-    class TriggerBot
+    class Triggerbot
     {
         public static void Start()
         {
-            int Crosshair = Tools.GetCrosshair();
-            Console.WriteLine(Crosshair);
-            if (Crosshair != 0 && Crosshair < 64)
+            while (true)
             {
-                int Entity = Tools.GetEntityBaseFromCrosshair(Crosshair);
-                int EnemyTeam = Tools.GetTeam(Entity);
-                int EnemyHealth = Tools.GetHealth(Entity);
-                if (EnemyTeam != Vars.MyTeam && EnemyHealth > 0)
+                if (Main.TriggerbotEnabled)
                 {
-                    Console.WriteLine("Shoot");
-                    Tools.Shoot();
+                    Console.WriteLine(Globals.LocalPlayer.CrosshairID);
+                    if (Globals.LocalPlayer.CrosshairID != 0 && Globals.LocalPlayer.CrosshairID < 64)
+                    {
+                        Entity Player = new Entity(Tools.GetEntityBaseFromCrosshair(Globals.LocalPlayer.CrosshairID));
+                        if (Player.Valid && Player.IsTeammate == false)
+                        {
+                            Console.WriteLine("Shoot");
+                            Tools.Shoot();
+                        }
+                    }
+                    Thread.Sleep(1);
                 }
             }
         }

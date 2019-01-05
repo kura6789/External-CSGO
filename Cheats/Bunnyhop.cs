@@ -1,28 +1,34 @@
-﻿using System;
+﻿using Binjector.Utilities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using Binjector_CSGO_V2.Utilities;
 
-namespace Binjector_CSGO_V2.Cheats
+namespace Binjector.Cheats
 {
     class Bunnyhop
     {
         public static void Start()
         {
-            Vars.Flag = Tools.GetFlags();
-
-            if ((Memory.GetAsyncKeyState(0x20) & 0x8000) > 0)
+            while (true)
             {
-            Console.WriteLine("Holding Key");
-            Console.WriteLine(Vars.Flag);
-
-                if (Vars.Flag == 257)
+                if (Main.BunnyhopEnabled)
                 {
-                    Console.WriteLine("Jumping");
+                    if ((Memory.GetAsyncKeyState(Keys.VK_SPACE) & 0x8000) > 0)
+                    {
+                        Console.WriteLine("Holding Key");
+                        Console.WriteLine(Globals.LocalPlayer.Flags);
+                        //Standing         //Crouching
+                        if (Globals.LocalPlayer.Flags == 257 || Globals.LocalPlayer.Flags == 263)
+                        {
+                            Console.WriteLine("Jumping");
 
-                    Tools.Jump();
+                            Tools.Jump();
+                        }
+                    }
+                    Thread.Sleep(1);
                 }
             }
         }
