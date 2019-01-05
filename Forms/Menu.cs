@@ -17,6 +17,29 @@ namespace Binjector
 {
     public partial class Menu : Form
     {
+        #region Overlay shit
+        public const string WindName = "Counter-Strike: Global Offensive";
+        IntPtr handle = FindWindow(null, WindName);
+        
+        public struct RECT
+        {
+            public int left, top, right, bottom;
+        }
+
+        [DllImport("user32.dll")]
+        static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool GetWindowRect(IntPtr hwnd, out RECT lpRect);
+        #endregion
+
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern bool AllocConsole();
@@ -59,7 +82,7 @@ namespace Binjector
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            
+            TopMost = true;
         }
 
         public void LoadH()
@@ -72,42 +95,66 @@ namespace Binjector
 
             while (true)
             {
+                #region Colors
+                Main.TeamColor = Color.FromArgb(TeamR.Value, TeamG.Value, TeamB.Value);
+                Main.EnemyColor = Color.FromArgb(EnemR.Value, EnemG.Value, EnemB.Value);
+
+                TeamGlowHeader.ForeColor = Main.TeamColor;
+                EnemyGlowHeader.ForeColor = Main.EnemyColor;
+
+                TeamRLabel.Text = "R: " + TeamR.Value.ToString();
+                TeamGLabel.Text = "G: " + TeamG.Value.ToString();
+                TeamBLabel.Text = "B: " + TeamB.Value.ToString();
+
+                EnemyRLabel.Text = "R: " + EnemR.Value.ToString();
+                EnemyGLabel.Text = "G: " + EnemG.Value.ToString();
+                EnemyBLabel.Text = "B: " + EnemB.Value.ToString();
+                #endregion
+
                 Tools.InitializeGlobals();
 
                 #region Key Checks
                 if ((Memory.GetAsyncKeyState(Keys.VK_F1) & 1) > 0)
-                {
-                    BunnyHopCheck.Checked = !BunnyHopCheck.Checked;
-                    if (voiceconfirm.Checked)
-                        synthesizer.SpeakAsync("Bunny Hop " + BunnyHopCheck.Checked);
-                }
+                    BunnyhopToggle.Toggled = !BunnyhopToggle.Toggled;
                 if ((Memory.GetAsyncKeyState(Keys.VK_F2) & 1) > 0)
-                {
-                    TriggerBotCheck.Checked = !TriggerBotCheck.Checked;
-                    if (voiceconfirm.Checked)
-                        synthesizer.SpeakAsync("Trigger Bot " + TriggerBotCheck.Checked);
-                }
+                    TriggerbotToggle.Toggled = !TriggerbotToggle.Toggled;
                 if ((Memory.GetAsyncKeyState(Keys.VK_F3) & 1) > 0)
-                {
-                    GlowCheck.Checked = !GlowCheck.Checked;
-                    if (voiceconfirm.Checked)
-                        synthesizer.SpeakAsync("Glow " + GlowCheck.Checked);
-                }
+                    GlowToggle.Toggled = !GlowToggle.Toggled;
                 if ((Memory.GetAsyncKeyState(Keys.VK_F4) & 1) > 0)
+                    AntiFlashToggle.Toggled = !AntiFlashToggle.Toggled;
+
+                if ((Memory.GetAsyncKeyState(Keys.VK_INSERT) & 1) > 0)
                 {
-                    NoflashCheck.Checked = !NoflashCheck.Checked;
-                    if (voiceconfirm.Checked)
-                        synthesizer.SpeakAsync("No Flash " + NoflashCheck.Checked);
+                    Visible = !Visible;
+
+                    if (Visible)
+                        FormContainer.Focus();
                 }
                 #endregion
 
-                Main.BunnyhopEnabled = BunnyHopCheck.Checked;
-                Main.TriggerbotEnabled = TriggerBotCheck.Checked;
-                Main.GlowEnabled = GlowCheck.Checked;
-                Main.NoflashEnabled = NoflashCheck.Checked;
+                Main.BunnyhopEnabled = BunnyhopToggle.Toggled;
+                Main.TriggerbotEnabled = TriggerbotToggle.Toggled;
+                Main.GlowEnabled = GlowToggle.Toggled;
+                Main.NoflashEnabled = AntiFlashToggle.Toggled;
+
 
                 Thread.Sleep(1);
             }
+        }
+
+        private void monoFlat_ThemeContainer1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monoFlat_Button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void monoFlat_Label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

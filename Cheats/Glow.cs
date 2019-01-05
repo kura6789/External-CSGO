@@ -28,14 +28,14 @@ namespace Binjector.Cheats
                         {
                             if (Player.IsTeammate)
                             {
-                                Player.Glow(0, 255, 0);
+                                Player.Glow(Main.TeamColor.R, Main.TeamColor.G, Main.TeamColor.B);
                             }
                             else
                             {
                                 if (!Player.Spotted)
                                     Player.Spotted = true;
 
-                                Player.Glow(255, 0, 0);
+                                Player.Glow(Main.EnemyColor.R, Main.EnemyColor.G, Main.EnemyColor.B);
                             }
                         }
                     }
