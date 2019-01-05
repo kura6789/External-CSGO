@@ -28,8 +28,8 @@ namespace Binjector.Cheats
                             Tools.Jump();
                         }
                     }
-                    Thread.Sleep(1);
                 }
+                Thread.Sleep(1);
             }
         }
     }

@@ -23,8 +23,8 @@ namespace Binjector.Cheats
                             Tools.Shoot();
                         }
                     }
-                    Thread.Sleep(1);
                 }
+                Thread.Sleep(1);
             }
         }
     }
