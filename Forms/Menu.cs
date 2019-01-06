@@ -20,7 +20,7 @@ namespace Binjector
         #region Overlay shit
         public const string WindName = "Counter-Strike: Global Offensive";
         IntPtr handle = FindWindow(null, WindName);
-        
+
         public struct RECT
         {
             public int left, top, right, bottom;
@@ -52,29 +52,34 @@ namespace Binjector
             if (Main.RunStartup())
             {
                 #region Start Cheats
-                new Thread(() => {
-                    Thread.CurrentThread.IsBackground = true; 
+                new Thread(() =>
+                {
+                    Thread.CurrentThread.IsBackground = true;
                     LoadH();
                 }).Start();
 
-                new Thread(() => {
-                    Thread.CurrentThread.IsBackground = true; 
+                new Thread(() =>
+                {
+                    Thread.CurrentThread.IsBackground = true;
                     Bunnyhop.Start();
                 }).Start();
 
-                new Thread(() => {
-                    Thread.CurrentThread.IsBackground = true; 
+                new Thread(() =>
+                {
+                    Thread.CurrentThread.IsBackground = true;
                     Triggerbot.Start();
                 }).Start();
 
-                new Thread(() => {
-                    Thread.CurrentThread.IsBackground = true; 
+                new Thread(() =>
+                {
+                    Thread.CurrentThread.IsBackground = true;
                     Glow.Start();
                 }).Start();
 
-                new Thread(() => {
-                    Thread.CurrentThread.IsBackground = true; 
-                    Noflash.Start();
+                new Thread(() =>
+                {
+                    Thread.CurrentThread.IsBackground = true;
+                    Misc.Start();
                 }).Start();
                 #endregion
             }
@@ -111,7 +116,11 @@ namespace Binjector
                 EnemyBLabel.Text = "B: " + EnemB.Value.ToString();
                 #endregion
 
-                Tools.InitializeGlobals();
+                new Thread(() =>
+                {
+                    Thread.CurrentThread.IsBackground = true;
+                    Tools.InitializeGlobals();
+                }).Start();
 
                 #region Key Checks
                 if ((Memory.GetAsyncKeyState(Keys.VK_F1) & 1) > 0)

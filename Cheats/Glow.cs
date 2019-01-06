@@ -16,14 +16,12 @@ namespace Binjector.Cheats
     {
         public static void Start()
         {
-            Globals.GlowObjectManager = Memory.ReadMemory<int>((int)Memory.g_pClient + signatures.dwGlowObjectManager);
             while (true)
             {
                 if (Main.GlowEnabled)
                 {
-                    for (int i = 0; i < 64; i++)
+                    foreach(Entity Player in Globals.EntityList)
                     {
-                        Entity Player = new Entity(Tools.GetEntityBase(i));
                         if (Player.Valid)
                         {
                             if (Player.IsTeammate)

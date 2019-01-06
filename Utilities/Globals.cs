@@ -11,5 +11,6 @@ namespace Binjector.Utilities
     {
         public static Entity LocalPlayer;
         public static int GlowObjectManager;
+        public static List<Entity> EntityList = new List<Entity>();
     }
 }

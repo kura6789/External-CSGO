@@ -50,7 +50,7 @@
   <ItemGroup>
     <Compile Include="Cheats\Bunnyhop.cs" />
     <Compile Include="Cheats\Glow.cs" />
-    <Compile Include="Cheats\Noflash.cs" />
+    <Compile Include="Cheats\Misc.cs" />
     <Compile Include="Cheats\Triggerbot.cs" />
     <Compile Include="Classes\Entity.cs" />
     <Compile Include="Classes\Keys.cs" />

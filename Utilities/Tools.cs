@@ -13,7 +13,19 @@ namespace Binjector.Utilities
     {
         public static void InitializeGlobals()
         {
-            Globals.LocalPlayer = new Entity(Memory.ReadMemory<int>((int)Memory.g_pClient + signatures.dwLocalPlayer));  
+            Globals.LocalPlayer = new Entity(Memory.ReadMemory<int>((int)Memory.g_pClient + signatures.dwLocalPlayer));
+            Globals.GlowObjectManager = Memory.ReadMemory<int>((int)Memory.g_pClient + signatures.dwGlowObjectManager);
+
+            // Get Players
+            var oldEntityList = new List<Entity>();
+
+            oldEntityList.Clear();
+            for (int i = 1; i <= 64; i++)
+            {
+                oldEntityList.Add(new Entity(GetEntityBase(i)));
+            }
+            Globals.EntityList = oldEntityList;
+            Thread.Sleep(100);
         }
 
         public static int GetEntityBase(int PlayerLoopID)
