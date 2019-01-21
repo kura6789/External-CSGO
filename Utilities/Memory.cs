@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 namespace Binjector.Utilities
 {
     // Credit to whoever made this
-    // Credit to whoever made this
     public static class Memory
     {
         public static string WindName = "Counter-Strike: Global Offensive";

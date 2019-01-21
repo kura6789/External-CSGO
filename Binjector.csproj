@@ -52,7 +52,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cheats\Aim.cs" />
     <Compile Include="Cheats\Bunnyhop.cs" />
     <Compile Include="Cheats\Visuals.cs" />
     <Compile Include="Cheats\Misc.cs" />

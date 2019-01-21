@@ -27,6 +27,7 @@ namespace Binjector.Cheats
 
                             if (canshoot)
                             {
+                                Thread.Sleep(Main.S.ShotDelay);
                                 Tools.Shoot();
                                 Thread.Sleep(Main.S.Firerate);
                             }

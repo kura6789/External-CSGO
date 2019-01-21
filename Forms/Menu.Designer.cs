@@ -69,12 +69,6 @@
             this.flatLabel1 = new FlatUI.FlatLabel();
             this.monoFlat_Separator1 = new MonoFlat.MonoFlat_Separator();
             this.GlowToggle = new FlatUI.FlatToggle();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.flatLabel28 = new FlatUI.FlatLabel();
-            this.RcsToggle = new FlatUI.FlatToggle();
-            this.flatLabel2 = new FlatUI.FlatLabel();
-            this.monoFlat_Separator2 = new MonoFlat.MonoFlat_Separator();
-            this.AimbotToggle = new FlatUI.FlatToggle();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.Firerate = new System.Windows.Forms.NumericUpDown();
             this.flatLabel27 = new FlatUI.FlatLabel();
@@ -105,13 +99,15 @@
             this.flatLabel4 = new FlatUI.FlatLabel();
             this.monoFlat_Separator4 = new MonoFlat.MonoFlat_Separator();
             this.MiscToggle = new FlatUI.FlatToggle();
+            this.delay = new System.Windows.Forms.NumericUpDown();
+            this.flatLabel2 = new FlatUI.FlatLabel();
             this.formSkin1.SuspendLayout();
             this.flatTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Firerate)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.delay)).BeginInit();
             this.SuspendLayout();
             // 
             // formSkin1
@@ -185,7 +181,6 @@
             this.flatTabControl1.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.flatTabControl1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
             this.flatTabControl1.Controls.Add(this.tabPage1);
-            this.flatTabControl1.Controls.Add(this.tabPage2);
             this.flatTabControl1.Controls.Add(this.tabPage3);
             this.flatTabControl1.Controls.Add(this.tabPage4);
             this.flatTabControl1.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -633,83 +628,11 @@
             this.GlowToggle.TabIndex = 0;
             this.GlowToggle.Text = "flatToggle1";
             // 
-            // tabPage2
-            // 
-            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.tabPage2.Controls.Add(this.flatLabel28);
-            this.tabPage2.Controls.Add(this.RcsToggle);
-            this.tabPage2.Controls.Add(this.flatLabel2);
-            this.tabPage2.Controls.Add(this.monoFlat_Separator2);
-            this.tabPage2.Controls.Add(this.AimbotToggle);
-            this.tabPage2.Location = new System.Drawing.Point(4, 44);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(828, 312);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Aimbot";
-            // 
-            // flatLabel28
-            // 
-            this.flatLabel28.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel28.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel28.ForeColor = System.Drawing.Color.White;
-            this.flatLabel28.Location = new System.Drawing.Point(88, 58);
-            this.flatLabel28.Name = "flatLabel28";
-            this.flatLabel28.Size = new System.Drawing.Size(181, 33);
-            this.flatLabel28.TabIndex = 7;
-            this.flatLabel28.Text = "Recoil Control";
-            this.flatLabel28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // RcsToggle
-            // 
-            this.RcsToggle.BackColor = System.Drawing.Color.Transparent;
-            this.RcsToggle.Checked = false;
-            this.RcsToggle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RcsToggle.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.RcsToggle.Location = new System.Drawing.Point(6, 58);
-            this.RcsToggle.Name = "RcsToggle";
-            this.RcsToggle.Options = FlatUI.FlatToggle._Options.Style3;
-            this.RcsToggle.Size = new System.Drawing.Size(76, 33);
-            this.RcsToggle.TabIndex = 6;
-            this.RcsToggle.Text = "flatToggle1";
-            // 
-            // flatLabel2
-            // 
-            this.flatLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel2.ForeColor = System.Drawing.Color.White;
-            this.flatLabel2.Location = new System.Drawing.Point(88, 6);
-            this.flatLabel2.Name = "flatLabel2";
-            this.flatLabel2.Size = new System.Drawing.Size(100, 33);
-            this.flatLabel2.TabIndex = 5;
-            this.flatLabel2.Text = "Aimbot";
-            this.flatLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // monoFlat_Separator2
-            // 
-            this.monoFlat_Separator2.Location = new System.Drawing.Point(3, 45);
-            this.monoFlat_Separator2.Name = "monoFlat_Separator2";
-            this.monoFlat_Separator2.Size = new System.Drawing.Size(811, 10);
-            this.monoFlat_Separator2.TabIndex = 4;
-            this.monoFlat_Separator2.Text = "monoFlat_Separator2";
-            // 
-            // AimbotToggle
-            // 
-            this.AimbotToggle.BackColor = System.Drawing.Color.Transparent;
-            this.AimbotToggle.Checked = false;
-            this.AimbotToggle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AimbotToggle.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.AimbotToggle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AimbotToggle.Location = new System.Drawing.Point(6, 6);
-            this.AimbotToggle.Name = "AimbotToggle";
-            this.AimbotToggle.Options = FlatUI.FlatToggle._Options.Style1;
-            this.AimbotToggle.Size = new System.Drawing.Size(76, 33);
-            this.AimbotToggle.TabIndex = 3;
-            this.AimbotToggle.Text = "flatToggle1";
-            // 
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage3.Controls.Add(this.delay);
+            this.tabPage3.Controls.Add(this.flatLabel2);
             this.tabPage3.Controls.Add(this.Firerate);
             this.tabPage3.Controls.Add(this.flatLabel27);
             this.tabPage3.Controls.Add(this.flatLabel26);
@@ -729,6 +652,7 @@
             // 
             this.Firerate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.Firerate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Firerate.ForeColor = System.Drawing.SystemColors.Window;
             this.Firerate.Increment = new decimal(new int[] {
             5,
             0,
@@ -743,6 +667,7 @@
             this.Firerate.Name = "Firerate";
             this.Firerate.Size = new System.Drawing.Size(74, 21);
             this.Firerate.TabIndex = 16;
+            this.Firerate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // flatLabel27
             // 
@@ -763,9 +688,9 @@
             this.flatLabel26.ForeColor = System.Drawing.Color.White;
             this.flatLabel26.Location = new System.Drawing.Point(88, 97);
             this.flatLabel26.Name = "flatLabel26";
-            this.flatLabel26.Size = new System.Drawing.Size(208, 33);
+            this.flatLabel26.Size = new System.Drawing.Size(323, 33);
             this.flatLabel26.TabIndex = 13;
-            this.flatLabel26.Text = "Only Scoped ";
+            this.flatLabel26.Text = "Only Scoped (Snipers Only)";
             this.flatLabel26.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // OnlyScoped
@@ -1111,6 +1036,39 @@
             this.MiscToggle.TabIndex = 9;
             this.MiscToggle.Text = "flatToggle2";
             // 
+            // delay
+            // 
+            this.delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.delay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.delay.ForeColor = System.Drawing.SystemColors.Window;
+            this.delay.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.delay.Location = new System.Drawing.Point(8, 176);
+            this.delay.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.delay.Name = "delay";
+            this.delay.Size = new System.Drawing.Size(74, 21);
+            this.delay.TabIndex = 18;
+            this.delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // flatLabel2
+            // 
+            this.flatLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel2.ForeColor = System.Drawing.Color.White;
+            this.flatLabel2.Location = new System.Drawing.Point(88, 166);
+            this.flatLabel2.Name = "flatLabel2";
+            this.flatLabel2.Size = new System.Drawing.Size(208, 36);
+            this.flatLabel2.TabIndex = 17;
+            this.flatLabel2.Text = "Shot Delay";
+            this.flatLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1127,10 +1085,10 @@
             this.formSkin1.ResumeLayout(false);
             this.flatTabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Firerate)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.delay)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1178,10 +1136,6 @@
         private FlatUI.FlatLabel flatLabel1;
         private MonoFlat.MonoFlat_Separator monoFlat_Separator1;
         private FlatUI.FlatToggle GlowToggle;
-        private System.Windows.Forms.TabPage tabPage2;
-        private FlatUI.FlatLabel flatLabel2;
-        private MonoFlat.MonoFlat_Separator monoFlat_Separator2;
-        private FlatUI.FlatToggle AimbotToggle;
         private System.Windows.Forms.TabPage tabPage3;
         private FlatUI.FlatLabel flatLabel3;
         private MonoFlat.MonoFlat_Separator monoFlat_Separator3;
@@ -1212,8 +1166,8 @@
         private FlatUI.FlatLabel flatLabel26;
         private FlatUI.FlatLabel flatLabel27;
         private System.Windows.Forms.NumericUpDown Firerate;
-        private FlatUI.FlatLabel flatLabel28;
-        private FlatUI.FlatToggle RcsToggle;
+        private System.Windows.Forms.NumericUpDown delay;
+        private FlatUI.FlatLabel flatLabel2;
     }
 }
 

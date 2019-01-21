@@ -25,8 +25,7 @@ namespace Binjector.Classes
         public bool OnlyNotMoving;
         public bool OnlyScoped;
         public int Firerate;
-        public bool AimEnabled;
-        public bool RCSEnabled;
+        public int ShotDelay;
 
         public Color GlowTeamColor;
         public Color GlowEnemyColor;

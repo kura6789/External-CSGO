@@ -143,8 +143,7 @@ namespace Binjector
                 S.OnlyNotMoving = OnlyNotMoving.Checked;
                 S.OnlyScoped = OnlyScoped.Checked;
                 S.Firerate = (int)Firerate.Value;
-                S.AimEnabled = AimbotToggle.Checked;
-                S.RCSEnabled = RcsToggle.Checked;
+                S.ShotDelay = (int)delay.Value;
 
                 Thread.Sleep(1);
             }
@@ -270,8 +269,6 @@ namespace Binjector
             OnlyNotMoving.Checked = s.OnlyNotMoving;
             RadarhackToggle.Checked = s.RadarEnabled;
             Firerate.Value = s.Firerate;
-            AimbotToggle.Checked = s.AimEnabled;
-            RcsToggle.Checked = s.RCSEnabled;
         }
     }
 }
