@@ -97,6 +97,7 @@ namespace Binjector
         private void Menu_Load(object sender, EventArgs e)
         {
             TopMost = true;
+            LastOffset.Text = "Last Offset Update: " + new DateTime(1970,1,1,0,0,0,0, DateTimeKind.Utc).AddSeconds(Main.O.timestamp).ToLocalTime();
             UpdateConfigList();
         }
 

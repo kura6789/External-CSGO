@@ -177,7 +177,7 @@
             this.LastOffset.ShowTimeDate = false;
             this.LastOffset.Size = new System.Drawing.Size(836, 25);
             this.LastOffset.TabIndex = 0;
-            this.LastOffset.Text = "Last Offset Update: 1/10/2019";
+            this.LastOffset.Text = "Last Offset Update: ";
             this.LastOffset.TextColor = System.Drawing.Color.White;
             // 
             // flatTabControl1

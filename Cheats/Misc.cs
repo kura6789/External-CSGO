@@ -19,15 +19,19 @@ namespace Binjector.Cheats
                 {
                     Globals.LocalPlayer.FlashDuration = 0;
                 }
-                if (Main.S.RadarEnabled)
+
+                foreach (Entity Player in Globals.EntityList)
                 {
-                    foreach(Entity Player in Globals.EntityList)
+                    if (Main.S.RadarEnabled)
                     {
                         if (!Player.Spotted)
                             Player.Spotted = true;
-                        if (!Main.S.ChamsEnabled)
-                                Player.ResetChams();
                     }
+                    if (!Main.S.ChamsEnabled)
+                        Player.ResetChams();
+                    else if (!Main.S.ChamTeam && Player.IsTeammate)
+                        Player.ResetChams();
+
                 }
                 Thread.Sleep(1);
             }

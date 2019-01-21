@@ -149,7 +149,7 @@ namespace Binjector.Classes
         }
         public void ResetChams()
         {
-            Cham(Color.FromArgb(255, 255, 255, 0));
+            Cham(Color.FromArgb(255, 255, 255, 255));
         }
         public bool Alive
         {
