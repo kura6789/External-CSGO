@@ -12,6 +12,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Speech.Synthesis;
+using static Binjector.Main;
+using System.IO;
+using Newtonsoft.Json;
+using Binjector.Classes;
 
 namespace Binjector
 {
@@ -48,16 +52,21 @@ namespace Binjector
         {
             //AllocConsole();
             InitializeComponent();
-
-            if (Main.RunStartup())
+            if (RunStartup())
             {
+                OffsetUpdater.UpdateOffsets();
                 #region Start Cheats
                 new Thread(() =>
                 {
                     Thread.CurrentThread.IsBackground = true;
-                    LoadH();
+                    CheckMenu();
                 }).Start();
-
+                new Thread(() =>
+                {
+                    Thread.CurrentThread.IsBackground = true;
+                    Tools.InitializeGlobals();
+                }).Start();
+                /////////////////////////////////////////////////
                 new Thread(() =>
                 {
                     Thread.CurrentThread.IsBackground = true;
@@ -73,7 +82,7 @@ namespace Binjector
                 new Thread(() =>
                 {
                     Thread.CurrentThread.IsBackground = true;
-                    Glow.Start();
+                    Visuals.Start();
                 }).Start();
 
                 new Thread(() =>
@@ -88,82 +97,180 @@ namespace Binjector
         private void Menu_Load(object sender, EventArgs e)
         {
             TopMost = true;
+            UpdateConfigList();
         }
 
-        public void LoadH()
+        public void CheckMenu()
         {
-            SpeechSynthesizer synthesizer = new SpeechSynthesizer();
-            synthesizer.Volume = 40;  // 0...100
-            synthesizer.Rate = 0;     // -10...10
-            Console.WriteLine("Start");
-            Main.RunStartup();
+            TeamGlowColorBtn.BackColor = Color.FromArgb(0, 255, 0);
+            EnemyGlowColorBtn.BackColor = Color.FromArgb(255, 0, 0);
+            BomberGlowBtn.BackColor = Color.FromArgb(255, 255, 0);
+            TeamChamBtn.BackColor = Color.FromArgb(0, 255, 0);
+            EnemyChamBtn.BackColor = Color.FromArgb(255, 0, 0);
+            ChamBomberBtn.BackColor = Color.FromArgb(255, 255, 0);
 
             while (true)
             {
                 #region Colors
-                Main.TeamColor = Color.FromArgb(TeamR.Value, TeamG.Value, TeamB.Value);
-                Main.EnemyColor = Color.FromArgb(EnemR.Value, EnemG.Value, EnemB.Value);
 
-                TeamGlowHeader.ForeColor = Main.TeamColor;
-                EnemyGlowHeader.ForeColor = Main.EnemyColor;
+                S.GlowTeamColor = TeamGlowColorBtn.BackColor;
+                S.GlowEnemyColor = EnemyGlowColorBtn.BackColor;
+                S.GlowBomberColor = BomberGlowBtn.BackColor;
 
-                TeamRLabel.Text = "R: " + TeamR.Value.ToString();
-                TeamGLabel.Text = "G: " + TeamG.Value.ToString();
-                TeamBLabel.Text = "B: " + TeamB.Value.ToString();
-
-                EnemyRLabel.Text = "R: " + EnemR.Value.ToString();
-                EnemyGLabel.Text = "G: " + EnemG.Value.ToString();
-                EnemyBLabel.Text = "B: " + EnemB.Value.ToString();
+                S.ChamTeamColor = TeamChamBtn.BackColor;
+                S.ChamEnemyColor = EnemyChamBtn.BackColor;
+                S.ChamBomberColor = ChamBomberBtn.BackColor;
                 #endregion
-
-                new Thread(() =>
-                {
-                    Thread.CurrentThread.IsBackground = true;
-                    Tools.InitializeGlobals();
-                }).Start();
-
                 #region Key Checks
-                if ((Memory.GetAsyncKeyState(Keys.VK_F1) & 1) > 0)
-                    BunnyhopToggle.Toggled = !BunnyhopToggle.Toggled;
-                if ((Memory.GetAsyncKeyState(Keys.VK_F2) & 1) > 0)
-                    TriggerbotToggle.Toggled = !TriggerbotToggle.Toggled;
-                if ((Memory.GetAsyncKeyState(Keys.VK_F3) & 1) > 0)
-                    GlowToggle.Toggled = !GlowToggle.Toggled;
-                if ((Memory.GetAsyncKeyState(Keys.VK_F4) & 1) > 0)
-                    AntiFlashToggle.Toggled = !AntiFlashToggle.Toggled;
-
                 if ((Memory.GetAsyncKeyState(Keys.VK_INSERT) & 1) > 0)
-                {
                     Visible = !Visible;
-
-                    if (Visible)
-                        FormContainer.Focus();
-                }
                 #endregion
 
-                Main.BunnyhopEnabled = BunnyhopToggle.Toggled;
-                Main.TriggerbotEnabled = TriggerbotToggle.Toggled;
-                Main.GlowEnabled = GlowToggle.Toggled;
-                Main.NoflashEnabled = AntiFlashToggle.Toggled;
-
+                S.MiscEnabled = MiscToggle.Checked;
+                S.BunnyhopEnabled = BunnyhopToggle.Checked;
+                S.TriggerbotEnabled = TriggerbotToggle.Checked;
+                S.GlowEnabled = GlowToggle.Checked;
+                S.NoflashEnabled = NoflashToggle.Checked;
+                S.RadarEnabled = RadarhackToggle.Checked;
+                S.ChamsEnabled = ChamsToggle.Checked;
+                S.GlowTeam = GlowTeam.Checked;
+                S.GlowHealth = GlowHealth.Checked;
+                S.GlowBomber = GlowBomber.Checked;
+                S.ChamTeam = ChamTeam.Checked;
+                S.ChamHealth = ChamHealth.Checked;
+                S.ChamBomber = ChamBomber.Checked;
+                S.OnlyNotMoving = OnlyNotMoving.Checked;
+                S.OnlyScoped = OnlyScoped.Checked;
+                S.Firerate = (int)Firerate.Value;
+                S.AimEnabled = AimbotToggle.Checked;
+                S.RCSEnabled = RcsToggle.Checked;
 
                 Thread.Sleep(1);
             }
         }
-
-        private void monoFlat_ThemeContainer1_Click(object sender, EventArgs e)
+        public void UpdateConfigList()
         {
-
+            DirectoryInfo d = new DirectoryInfo($@"{Application.StartupPath}\Configs");
+            FileInfo[] Files = d.GetFiles("*.json");
+            ConfigDropdown.Items.Clear();
+            foreach (FileInfo file in Files)
+            {
+                ConfigDropdown.Items.Add(file.Name.Substring(0, file.Name.Length - 12));
+            }
         }
 
-        private void monoFlat_Button1_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void monoFlat_Label3_Click(object sender, EventArgs e)
+        private void HideButton_Click(object sender, EventArgs e)
         {
+            Visible = !Visible;
+        }
+        #region Color button Checks
+        private void TeamGlowColorBtn_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                TeamGlowColorBtn.BackColor = colorDialog1.Color;
+            }
+        }
 
+        private void EnemyGlowColorBtn_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                EnemyGlowColorBtn.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void BomberGlowBtn_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                BomberGlowBtn.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void TeamChamBtn_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                TeamChamBtn.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void EnemyChamBtn_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                EnemyChamBtn.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void ChamBomberBtn_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                ChamBomberBtn.BackColor = colorDialog1.Color;
+            }
+        }
+        #endregion
+
+        private void CreateConfig_Click(object sender, EventArgs e)
+        {
+            ConfigManager.AddConfig(ConfigTextbox.Text);
+            ConfigTextbox.Text = "";
+
+            foreach (string config in Configs)
+            {
+                ConfigDropdown.Items.Add(config);
+            }
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            UpdateConfigList();
+        }
+
+        private void SaveBtn_Click(object sender, EventArgs e)
+        {
+            ConfigManager.SaveConfig(ConfigManager.CurrentConfig);
+        }
+
+        private void ConfigDropdown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ConfigManager.CurrentConfig = ConfigDropdown.Text;
+            CurConfig.Text = "Using Config: " + ConfigManager.CurrentConfig;
+
+            string json = File.ReadAllText($@"{Application.StartupPath}\Configs\{ConfigManager.CurrentConfig}.Config.json");
+            Settings s = JsonConvert.DeserializeObject<Settings>(json);
+
+            BunnyhopToggle.Checked = s.BunnyhopEnabled;
+            TriggerbotToggle.Checked = s.TriggerbotEnabled;
+            GlowToggle.Checked = s.GlowEnabled;
+            NoflashToggle.Checked = s.NoflashEnabled;
+            ChamsToggle.Checked = s.ChamsEnabled;
+            GlowTeam.Checked = s.GlowTeam;
+            GlowHealth.Checked = s.GlowHealth;
+            GlowBomber.Checked = s.GlowBomber;
+            TeamGlowColorBtn.BackColor = s.GlowTeamColor;
+            EnemyGlowColorBtn.BackColor = s.GlowEnemyColor;
+            BomberGlowBtn.BackColor = s.GlowBomberColor;
+            TeamChamBtn.BackColor = s.ChamTeamColor;
+            EnemyChamBtn.BackColor = s.ChamEnemyColor;
+            ChamBomberBtn.BackColor = s.ChamBomberColor;
+            MiscToggle.Checked = s.MiscEnabled;
+            ChamHealth.Checked = s.ChamHealth;
+            ChamTeam.Checked = s.ChamTeam;
+            ChamBomber.Checked = s.ChamBomber;
+            OnlyScoped.Checked = s.OnlyScoped;
+            OnlyNotMoving.Checked = s.OnlyNotMoving;
+            RadarhackToggle.Checked = s.RadarEnabled;
+            Firerate.Value = s.Firerate;
+            AimbotToggle.Checked = s.AimEnabled;
+            RcsToggle.Checked = s.RCSEnabled;
         }
     }
 }

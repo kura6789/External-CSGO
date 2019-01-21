@@ -1,11 +1,12 @@
 ﻿using Binjector.Cheats;
+using Binjector.Classes;
 using Binjector.Utilities;
-using hazedumper;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
@@ -16,41 +17,36 @@ namespace Binjector
 {
     public class Main
     {
-        public static bool BunnyhopEnabled;
-        public static bool TriggerbotEnabled;
-        public static bool GlowEnabled;
-        public static bool NoflashEnabled;
+        public static List<string> Configs = new List<string>();
 
-        public static Color TeamColor;
-        public static Color EnemyColor;
+        public static Size ScreenSize;
+        public static Vector2 MidScreen;
+        public static RECT ScreenRect;
 
-        public static bool HackRunning = false;
-
+        public static RootObject O;
+        public static Settings S = new Settings();
         public static bool RunStartup()
         {
             var CSGO = Process.GetProcessesByName("csgo");
             if (CSGO.Length != 0)
             {
-                Memory.g_pProcess = CSGO[0];
-                Memory.g_pProcessHandle = Memory.OpenProcess(0x0008 | 0x0010 | 0x0020, false, Memory.g_pProcess.Id);
-                foreach (ProcessModule Module in Memory.g_pProcess.Modules)
+                Memory.Process = CSGO[0];
+                Memory.ProcessHandle = Memory.OpenProcess(0x0008 | 0x0010 | 0x0020, false, Memory.Process.Id);
+                foreach (ProcessModule Module in Memory.Process.Modules)
                 {
                     if ((Module.ModuleName == "client_panorama.dll"))
-                        Memory.g_pClient = Module.BaseAddress;
+                        Memory.Client = Module.BaseAddress;
 
                     if ((Module.ModuleName == "engine.dll"))
-                        Memory.g_pEngine = Module.BaseAddress;
+                        Memory.Engine = Module.BaseAddress;
                 }
-                Console.WriteLine("csgo process was found");
                 return true;
-
             }
             else
             {
-                Console.WriteLine("csgo process not found");
-                MessageBox.Show("Please start CSGO before running Binjector", "Binjector", MessageBoxButtons.OK);
+                MessageBox.Show("Please start CSGO Running the cheat", "Error", MessageBoxButtons.OK);
                 Environment.Exit(1);
-                return false; 
+                return false;
             }
         }
     }

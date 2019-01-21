@@ -14,22 +14,19 @@ namespace Binjector.Cheats
         {
             while (true)
             {
-                if (Main.BunnyhopEnabled)
+                if (Main.S.BunnyhopEnabled) // make sure the cheats enabled in the menu
                 {
-                    if ((Memory.GetAsyncKeyState(Keys.VK_SPACE) & 0x8000) > 0)
+                    if (Tools.HoldingKey(Keys.VK_SPACE)) // while holding space
                     {
-                        Console.WriteLine("Holding Key");
-                        Console.WriteLine(Globals.LocalPlayer.Flags);
-                        //Standing         //Crouching
-                        if (Globals.LocalPlayer.Flags == 257 || Globals.LocalPlayer.Flags == 263)
+                        // Flags show if you are on the ground or not. 257 is standing on the ground, and 263 is crouching on the ground.
+                        if (Globals.LocalPlayer.Flags == 257 || Globals.LocalPlayer.Flags == 263 && !Globals.LocalPlayer.IsStill)
                         {
-                            Console.WriteLine("Jumping");
-
+                            // stuff checks out. Jump!
                             Tools.Jump();
                         }
                     }
                 }
-                Thread.Sleep(1);
+                Thread.Sleep(1); // reduce cpu usage again
             }
         }
     }

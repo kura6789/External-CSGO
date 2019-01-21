@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Binjector.Classes;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -9,8 +10,24 @@ using System.Threading.Tasks;
 namespace Binjector.Utilities
 {
     // Credit to whoever made this
+    // Credit to whoever made this
     public static class Memory
     {
+        public static string WindName = "Counter-Strike: Global Offensive";
+
+        [DllImport("user32.dll")]
+        public static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool GetWindowRect(IntPtr hwnd, out RECT lpRect);
+
         [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.StdCall)]
         public static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint dwData, int dwExtraInfo);
 
@@ -29,10 +46,10 @@ namespace Binjector.Utilities
         [DllImport("user32.dll")]
         public static extern short GetAsyncKeyState(int vKey);
 
-        public static Process g_pProcess;
-        public static IntPtr g_pProcessHandle;
-        public static IntPtr g_pClient;
-        public static IntPtr g_pEngine;
+        public static Process Process;
+        public static IntPtr ProcessHandle;
+        public static IntPtr Client;
+        public static IntPtr Engine;
         public static int m_iBytesRead = 0;
         public static int m_iBytesWrite = 0;
 
@@ -40,7 +57,7 @@ namespace Binjector.Utilities
         {
             int ByteSize = Marshal.SizeOf(typeof(T));
             byte[] buffer = new byte[ByteSize];
-            ReadProcessMemory((int)g_pProcessHandle, Adress, buffer, buffer.Length, ref m_iBytesRead);
+            ReadProcessMemory((int)ProcessHandle, Adress, buffer, buffer.Length, ref m_iBytesRead);
 
             return ByteArrayToStructure<T>(buffer);
         }
@@ -49,7 +66,7 @@ namespace Binjector.Utilities
         {
             byte[] buffer = StructureToByteArray(Value);
 
-            WriteProcessMemory((int)g_pProcessHandle, Adress, buffer, buffer.Length, out m_iBytesWrite);
+            WriteProcessMemory((int)ProcessHandle, Adress, buffer, buffer.Length, out m_iBytesWrite);
         }
 
         public static float[] ConvertToFloatArray(byte[] bytes)

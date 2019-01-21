@@ -1,4 +1,5 @@
-﻿using Binjector.Utilities;
+﻿using Binjector.Classes;
+using Binjector.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +15,19 @@ namespace Binjector.Cheats
         {
             while (true)
             {
-                if (Main.NoflashEnabled && Globals.LocalPlayer.FlashDuration > 0)
+                if (Main.S.NoflashEnabled && Globals.LocalPlayer.FlashDuration > 0)
                 {
                     Globals.LocalPlayer.FlashDuration = 0;
+                }
+                if (Main.S.RadarEnabled)
+                {
+                    foreach(Entity Player in Globals.EntityList)
+                    {
+                        if (!Player.Spotted)
+                            Player.Spotted = true;
+                        if (!Main.S.ChamsEnabled)
+                                Player.ResetChams();
+                    }
                 }
                 Thread.Sleep(1);
             }

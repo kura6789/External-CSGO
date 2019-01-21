@@ -7,15 +7,6 @@ using System.Threading.Tasks;
 
 namespace Binjector.Classes
 {
-    public enum LifeState
-    {
-        Alive = 0, KillCam = 1, Dead = 2
-    }
-    public enum Team
-    {
-        None = 0, Spectator = 1, Terrorists = 2, CounterTerrorists = 3
-    }
-
     [StructLayout(LayoutKind.Explicit)]
     public struct GlowStruct
     {
@@ -45,4 +36,9 @@ namespace Binjector.Classes
         [FieldOffset(0x2C)]
         public bool m_bFullBloom;
     };
+
+    public struct RECT
+    {
+        public int left, top, right, bottom;
+    }
 }

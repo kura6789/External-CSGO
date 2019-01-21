@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoWarn>CS0414;CS0649</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
@@ -48,13 +52,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cheats\Aim.cs" />
     <Compile Include="Cheats\Bunnyhop.cs" />
-    <Compile Include="Cheats\Glow.cs" />
+    <Compile Include="Cheats\Visuals.cs" />
     <Compile Include="Cheats\Misc.cs" />
     <Compile Include="Cheats\Triggerbot.cs" />
     <Compile Include="Classes\Entity.cs" />
     <Compile Include="Classes\Keys.cs" />
     <Compile Include="Classes\Mouse.cs" />
+    <Compile Include="Classes\Offsets.cs" />
+    <Compile Include="Classes\Settings.cs" />
     <Compile Include="Classes\Structs.cs" />
     <Compile Include="Forms\Menu.cs">
       <SubType>Form</SubType>
@@ -65,10 +72,83 @@
     <Compile Include="Main.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Themes\FlatUI\FlatAlertBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatClose.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatColorPalette.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatColors.cs" />
+    <Compile Include="Themes\FlatUI\FlatComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatContextMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatMax.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatMini.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatNumeric.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatStatusBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatStickyButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatToggle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatTrackBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FlatTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\FormSkin.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Themes\FlatUI\Helpers.cs" />
+    <Compile Include="Themes\FlatUI\MouseState.cs" />
     <Compile Include="Themes\MonoFlat Theme.cs" />
+    <Compile Include="Utilities\ConfigManager.cs" />
     <Compile Include="Utilities\Globals.cs" />
     <Compile Include="Utilities\Memory.cs" />
-    <Compile Include="Utilities\Offsets.cs" />
+    <Compile Include="Utilities\OffsetUpdater.cs" />
     <Compile Include="Utilities\Tools.cs" />
     <EmbeddedResource Include="Forms\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -82,6 +162,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
