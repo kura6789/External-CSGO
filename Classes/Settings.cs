@@ -26,12 +26,30 @@ namespace Binjector.Classes
         public bool OnlyScoped;
         public int Firerate;
         public int ShotDelay;
+        public bool OverlayEnabled;
+        public bool VisualsEnabled;
+        public bool BoxESP;
+        public bool ESPTeam;
+        public bool Tracers;
+        public bool TracersTeam;
+        public bool Labels;
+        public bool TeamLabels;
+        public bool Aimbot;
+        public bool ShowCrosshair;
+        public bool ShowFOV;
+        public int FOVBar;
 
         public Color GlowTeamColor;
         public Color GlowEnemyColor;
-        public Color GlowBomberColor;
         public Color ChamTeamColor;
         public Color ChamEnemyColor;
-        public Color ChamBomberColor;
+        public Color ESPTeamColor;
+        public Color ESPEnemyColor;
+        public Color LabelTeamColor;
+        public Color LabelEnemyColor;
+        public Color TracerTeamColor;
+        public Color TracerEnemyColor;
+        public Color CrosshairColor;
+        public Color FOVCircleColor;
     }
 }

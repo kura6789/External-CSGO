@@ -17,7 +17,7 @@ namespace Binjector.Cheats
         {
             while (true)
             {
-                if (Main.S.GlowEnabled || Main.S.ChamsEnabled)
+                if (Main.S.VisualsEnabled)
                 {
                     foreach (Entity Player in Globals.EntityList)
                     {

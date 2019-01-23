@@ -16,33 +16,14 @@ using static Binjector.Main;
 using System.IO;
 using Newtonsoft.Json;
 using Binjector.Classes;
+using Binjector.Forms;
+using System.Numerics;
 
 namespace Binjector
 {
     public partial class Menu : Form
     {
-        #region Overlay shit
-        public const string WindName = "Counter-Strike: Global Offensive";
-        IntPtr handle = FindWindow(null, WindName);
-
-        public struct RECT
-        {
-            public int left, top, right, bottom;
-        }
-
-        [DllImport("user32.dll")]
-        static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
-
-        [DllImport("user32.dll", SetLastError = true)]
-        static extern int GetWindowLong(IntPtr hWnd, int nIndex);
-
-        [DllImport("user32.dll", SetLastError = true)]
-        static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
-
-        [DllImport("user32.dll", SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        public static extern bool GetWindowRect(IntPtr hwnd, out RECT lpRect);
-        #endregion
+        Overlay overlay = new Overlay();
 
         [DllImport("kernel32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -56,6 +37,7 @@ namespace Binjector
             {
                 OffsetUpdater.UpdateOffsets();
                 #region Start Cheats
+
                 new Thread(() =>
                 {
                     Thread.CurrentThread.IsBackground = true;
@@ -97,30 +79,46 @@ namespace Binjector
         private void Menu_Load(object sender, EventArgs e)
         {
             TopMost = true;
-            LastOffset.Text = "Last Offset Update: " + new DateTime(1970,1,1,0,0,0,0, DateTimeKind.Utc).AddSeconds(Main.O.timestamp).ToLocalTime();
+            LastOffset.Text = "Last Offset Update: " + new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(Main.O.timestamp).ToLocalTime();
             UpdateConfigList();
         }
 
         public void CheckMenu()
         {
-            TeamGlowColorBtn.BackColor = Color.FromArgb(0, 255, 0);
-            EnemyGlowColorBtn.BackColor = Color.FromArgb(255, 0, 0);
-            BomberGlowBtn.BackColor = Color.FromArgb(255, 255, 0);
-            TeamChamBtn.BackColor = Color.FromArgb(0, 255, 0);
-            EnemyChamBtn.BackColor = Color.FromArgb(255, 0, 0);
-            ChamBomberBtn.BackColor = Color.FromArgb(255, 255, 0);
+            
+
+            Color Red = Color.FromArgb(255, 0, 0);
+            Color Green = Color.FromArgb(0, 255, 0);
+            TeamGlowColorBtn.BackColor = Green;
+            EnemyGlowColorBtn.BackColor = Red;
+            EnemyChamBtn.BackColor = Red;
+            TeamChamBtn.BackColor = Green;
+            EnemyESPColorBtn.BackColor = Red;
+            TeamESPColorBtn.BackColor = Green;
+            TeamTracerBtn.BackColor = Green;
+            EnemyTracerBtn.BackColor = Red;
+            TeamLabelBtn.BackColor = Green;
+            EnemyLabelBtn.BackColor = Red;
+            CrosshairBtn.BackColor = Color.Magenta;
+            FovCircleBtn.BackColor = Color.Blue;
 
             while (true)
             {
+                flatLabel45.Text = "FOV Max Pixel Distance: " + Tools.MaxFOV;
                 #region Colors
 
                 S.GlowTeamColor = TeamGlowColorBtn.BackColor;
                 S.GlowEnemyColor = EnemyGlowColorBtn.BackColor;
-                S.GlowBomberColor = BomberGlowBtn.BackColor;
-
                 S.ChamTeamColor = TeamChamBtn.BackColor;
                 S.ChamEnemyColor = EnemyChamBtn.BackColor;
-                S.ChamBomberColor = ChamBomberBtn.BackColor;
+                S.ESPEnemyColor = EnemyESPColorBtn.BackColor;
+                S.ESPTeamColor = TeamESPColorBtn.BackColor;
+                S.TracerEnemyColor = EnemyTracerBtn.BackColor;
+                S.TracerTeamColor = TeamTracerBtn.BackColor;
+                S.LabelEnemyColor = EnemyLabelBtn.BackColor;
+                S.LabelTeamColor = TeamLabelBtn.BackColor;
+                S.CrosshairColor = CrosshairBtn.BackColor;
+                S.FOVCircleColor = FovCircleBtn.BackColor;
                 #endregion
                 #region Key Checks
                 if ((Memory.GetAsyncKeyState(Keys.VK_INSERT) & 1) > 0)
@@ -136,14 +134,25 @@ namespace Binjector
                 S.ChamsEnabled = ChamsToggle.Checked;
                 S.GlowTeam = GlowTeam.Checked;
                 S.GlowHealth = GlowHealth.Checked;
-                S.GlowBomber = GlowBomber.Checked;
                 S.ChamTeam = ChamTeam.Checked;
                 S.ChamHealth = ChamHealth.Checked;
-                S.ChamBomber = ChamBomber.Checked;
                 S.OnlyNotMoving = OnlyNotMoving.Checked;
                 S.OnlyScoped = OnlyScoped.Checked;
                 S.Firerate = (int)Firerate.Value;
                 S.ShotDelay = (int)delay.Value;
+                S.OverlayEnabled = flatToggle1.Checked;
+                S.BoxESP = BoxESPCheck.Checked;
+                S.VisualsEnabled = OtherVisualsCheck.Checked;
+                S.ESPTeam = ESPTeam.Checked;
+                S.Tracers = Tracers.Checked;
+                S.TracersTeam = TracersTeam.Checked;
+                S.Labels = Labels.Checked;
+                S.TeamLabels = TeamLabels.Checked;
+                S.Aimbot = Aimbot.Checked;
+                S.ShowFOV = ShowFOVCrosshair.Checked;
+                S.FOVBar = flatTrackBar1.Value;
+                Tools.MaxFOV = flatTrackBar1.Value;
+                S.ShowCrosshair = recoilcircle.Checked;
 
                 Thread.Sleep(1);
             }
@@ -185,14 +194,6 @@ namespace Binjector
             }
         }
 
-        private void BomberGlowBtn_Click(object sender, EventArgs e)
-        {
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            {
-                BomberGlowBtn.BackColor = colorDialog1.Color;
-            }
-        }
-
         private void TeamChamBtn_Click(object sender, EventArgs e)
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
@@ -209,11 +210,67 @@ namespace Binjector
             }
         }
 
-        private void ChamBomberBtn_Click(object sender, EventArgs e)
+        private void EnemyESPColorBtn_Click(object sender, EventArgs e)
         {
             if (colorDialog1.ShowDialog() == DialogResult.OK)
             {
-                ChamBomberBtn.BackColor = colorDialog1.Color;
+                EnemyESPColorBtn.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void TeamESPColorBtn_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                TeamESPColorBtn.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void TeamTracerBtn_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                TeamTracerBtn.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void EnemyTracerBtn_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                EnemyTracerBtn.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void TeamLabelBtn_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                TeamLabelBtn.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void EnemyLabelBtn_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                EnemyLabelBtn.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void CrosshairBtn_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                CrosshairBtn.BackColor = colorDialog1.Color;
+            }
+        }
+
+        private void FovCircleBtn_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                FovCircleBtn.BackColor = colorDialog1.Color;
             }
         }
         #endregion
@@ -254,21 +311,54 @@ namespace Binjector
             ChamsToggle.Checked = s.ChamsEnabled;
             GlowTeam.Checked = s.GlowTeam;
             GlowHealth.Checked = s.GlowHealth;
-            GlowBomber.Checked = s.GlowBomber;
             TeamGlowColorBtn.BackColor = s.GlowTeamColor;
             EnemyGlowColorBtn.BackColor = s.GlowEnemyColor;
-            BomberGlowBtn.BackColor = s.GlowBomberColor;
             TeamChamBtn.BackColor = s.ChamTeamColor;
             EnemyChamBtn.BackColor = s.ChamEnemyColor;
-            ChamBomberBtn.BackColor = s.ChamBomberColor;
             MiscToggle.Checked = s.MiscEnabled;
             ChamHealth.Checked = s.ChamHealth;
             ChamTeam.Checked = s.ChamTeam;
-            ChamBomber.Checked = s.ChamBomber;
             OnlyScoped.Checked = s.OnlyScoped;
             OnlyNotMoving.Checked = s.OnlyNotMoving;
             RadarhackToggle.Checked = s.RadarEnabled;
             Firerate.Value = s.Firerate;
+            delay.Value = s.ShotDelay;
+            flatToggle1.Checked = s.OverlayEnabled;
+            OtherVisualsCheck.Checked = s.VisualsEnabled;
+            BoxESPCheck.Checked = s.BoxESP;
+            ESPTeam.Checked = s.ESPTeam;
+            Tracers.Checked = s.Tracers;
+            TracersTeam.Checked = s.TracersTeam;
+            Labels.Checked = s.Labels;
+            TeamLabels.Checked = s.TeamLabels;
+            EnemyESPColorBtn.BackColor = s.ESPEnemyColor;
+            TeamESPColorBtn.BackColor = s.ESPTeamColor;
+            EnemyLabelBtn.BackColor = s.LabelEnemyColor;
+            TeamLabelBtn.BackColor = s.LabelTeamColor;
+            EnemyTracerBtn.BackColor = s.TracerEnemyColor;
+            TeamTracerBtn.BackColor = s.TracerTeamColor;
+            CrosshairBtn.BackColor = s.CrosshairColor;
+            FovCircleBtn.BackColor = s.FOVCircleColor;
+            Aimbot.Checked = s.Aimbot;
+            flatTrackBar1.Value = s.FOVBar;
+            ShowFOVCrosshair.Checked = s.ShowFOV;
+            recoilcircle.Checked = s.ShowCrosshair;
+
+            if (s.OverlayEnabled)
+                overlay.Show();
+            else
+                overlay.Hide();
+
         }
+
+        private void flatToggle1_CheckedChanged(object sender)
+        {
+            if (flatToggle1.Checked)
+                overlay.Show();
+            else
+                overlay.Hide();
+        }
+
+
     }
 }

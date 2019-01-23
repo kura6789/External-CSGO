@@ -34,42 +34,44 @@
             this.ExitButton = new FlatUI.FlatButton();
             this.LastOffset = new FlatUI.FlatStatusBar();
             this.flatTabControl1 = new FlatUI.FlatTabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.ChamBomberBtn = new System.Windows.Forms.Button();
-            this.flatLabel19 = new FlatUI.FlatLabel();
-            this.EnemyChamBtn = new System.Windows.Forms.Button();
-            this.flatLabel21 = new FlatUI.FlatLabel();
-            this.TeamChamBtn = new System.Windows.Forms.Button();
-            this.flatLabel22 = new FlatUI.FlatLabel();
-            this.BomberGlowBtn = new System.Windows.Forms.Button();
-            this.flatLabel17 = new FlatUI.FlatLabel();
-            this.EnemyGlowColorBtn = new System.Windows.Forms.Button();
-            this.flatLabel16 = new FlatUI.FlatLabel();
-            this.flatLabel18 = new FlatUI.FlatLabel();
-            this.flatListBox2 = new FlatUI.FlatListBox();
-            this.flatLabel20 = new FlatUI.FlatLabel();
-            this.TeamGlowColorBtn = new System.Windows.Forms.Button();
-            this.flatLabel15 = new FlatUI.FlatLabel();
-            this.flatLabel12 = new FlatUI.FlatLabel();
-            this.ChamHealth = new FlatUI.FlatToggle();
-            this.flatLabel13 = new FlatUI.FlatLabel();
-            this.ChamBomber = new FlatUI.FlatToggle();
-            this.flatLabel14 = new FlatUI.FlatLabel();
-            this.ChamTeam = new FlatUI.FlatToggle();
-            this.monoFlat_Separator5 = new MonoFlat.MonoFlat_Separator();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.flatLabel11 = new FlatUI.FlatLabel();
             this.ChamsToggle = new FlatUI.FlatToggle();
+            this.flatLabel12 = new FlatUI.FlatLabel();
+            this.flatLabel14 = new FlatUI.FlatLabel();
+            this.ChamHealth = new FlatUI.FlatToggle();
+            this.ChamTeam = new FlatUI.FlatToggle();
+            this.monoFlat_Separator10 = new MonoFlat.MonoFlat_Separator();
             this.flatLabel10 = new FlatUI.FlatLabel();
             this.GlowHealth = new FlatUI.FlatToggle();
-            this.flatLabel9 = new FlatUI.FlatLabel();
-            this.GlowBomber = new FlatUI.FlatToggle();
-            this.flatListBox1 = new FlatUI.FlatListBox();
             this.flatLabel5 = new FlatUI.FlatLabel();
             this.GlowTeam = new FlatUI.FlatToggle();
+            this.monoFlat_Separator9 = new MonoFlat.MonoFlat_Separator();
+            this.flatLabel35 = new FlatUI.FlatLabel();
+            this.OtherVisualsCheck = new FlatUI.FlatToggle();
             this.flatLabel1 = new FlatUI.FlatLabel();
-            this.monoFlat_Separator1 = new MonoFlat.MonoFlat_Separator();
             this.GlowToggle = new FlatUI.FlatToggle();
+            this.flatListBox4 = new FlatUI.FlatListBox();
+            this.TeamLabels = new FlatUI.FlatToggle();
+            this.flatLabel33 = new FlatUI.FlatLabel();
+            this.Labels = new FlatUI.FlatToggle();
+            this.flatLabel34 = new FlatUI.FlatLabel();
+            this.monoFlat_Separator8 = new MonoFlat.MonoFlat_Separator();
+            this.TracersTeam = new FlatUI.FlatToggle();
+            this.flatLabel31 = new FlatUI.FlatLabel();
+            this.Tracers = new FlatUI.FlatToggle();
+            this.flatLabel32 = new FlatUI.FlatLabel();
+            this.monoFlat_Separator7 = new MonoFlat.MonoFlat_Separator();
+            this.ESPTeam = new FlatUI.FlatToggle();
+            this.flatLabel30 = new FlatUI.FlatLabel();
+            this.BoxESPCheck = new FlatUI.FlatToggle();
+            this.flatLabel29 = new FlatUI.FlatLabel();
+            this.flatLabel28 = new FlatUI.FlatLabel();
+            this.flatToggle1 = new FlatUI.FlatToggle();
+            this.monoFlat_Separator2 = new MonoFlat.MonoFlat_Separator();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.delay = new System.Windows.Forms.NumericUpDown();
+            this.flatLabel2 = new FlatUI.FlatLabel();
             this.Firerate = new System.Windows.Forms.NumericUpDown();
             this.flatLabel27 = new FlatUI.FlatLabel();
             this.flatLabel26 = new FlatUI.FlatLabel();
@@ -79,6 +81,53 @@
             this.flatLabel3 = new FlatUI.FlatLabel();
             this.monoFlat_Separator3 = new MonoFlat.MonoFlat_Separator();
             this.TriggerbotToggle = new FlatUI.FlatToggle();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.recoilcircle = new FlatUI.FlatToggle();
+            this.flatLabel46 = new FlatUI.FlatLabel();
+            this.flatTrackBar1 = new FlatUI.FlatTrackBar();
+            this.flatLabel45 = new FlatUI.FlatLabel();
+            this.ShowFOVCrosshair = new FlatUI.FlatToggle();
+            this.sdasd = new FlatUI.FlatLabel();
+            this.flatLabel44 = new FlatUI.FlatLabel();
+            this.monoFlat_Separator1 = new MonoFlat.MonoFlat_Separator();
+            this.Aimbot = new FlatUI.FlatToggle();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.EnemyChamBtn = new System.Windows.Forms.Button();
+            this.EnemyTracerBtn = new System.Windows.Forms.Button();
+            this.flatLabel15 = new FlatUI.FlatLabel();
+            this.flatLabel16 = new FlatUI.FlatLabel();
+            this.TeamTracerBtn = new System.Windows.Forms.Button();
+            this.flatLabel18 = new FlatUI.FlatLabel();
+            this.flatListBox1 = new FlatUI.FlatListBox();
+            this.TeamESPColorBtn = new System.Windows.Forms.Button();
+            this.flatLabel19 = new FlatUI.FlatLabel();
+            this.flatLabel20 = new FlatUI.FlatLabel();
+            this.EnemyESPColorBtn = new System.Windows.Forms.Button();
+            this.flatLabel21 = new FlatUI.FlatLabel();
+            this.flatListBox2 = new FlatUI.FlatListBox();
+            this.EnemyGlowColorBtn = new System.Windows.Forms.Button();
+            this.TeamGlowColorBtn = new System.Windows.Forms.Button();
+            this.flatLabel22 = new FlatUI.FlatLabel();
+            this.flatLabel36 = new FlatUI.FlatLabel();
+            this.flatLabel37 = new FlatUI.FlatLabel();
+            this.flatListBox6 = new FlatUI.FlatListBox();
+            this.FovCircleBtn = new System.Windows.Forms.Button();
+            this.flatLabel41 = new FlatUI.FlatLabel();
+            this.flatLabel42 = new FlatUI.FlatLabel();
+            this.CrosshairBtn = new System.Windows.Forms.Button();
+            this.flatLabel43 = new FlatUI.FlatLabel();
+            this.flatListBox8 = new FlatUI.FlatListBox();
+            this.EnemyLabelBtn = new System.Windows.Forms.Button();
+            this.flatLabel38 = new FlatUI.FlatLabel();
+            this.flatLabel39 = new FlatUI.FlatLabel();
+            this.TeamLabelBtn = new System.Windows.Forms.Button();
+            this.flatLabel40 = new FlatUI.FlatLabel();
+            this.flatListBox7 = new FlatUI.FlatListBox();
+            this.TeamChamBtn = new System.Windows.Forms.Button();
+            this.flatLabel9 = new FlatUI.FlatLabel();
+            this.flatLabel13 = new FlatUI.FlatLabel();
+            this.flatLabel17 = new FlatUI.FlatLabel();
+            this.flatListBox5 = new FlatUI.FlatListBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.CurConfig = new FlatUI.FlatLabel();
             this.SaveBtn = new FlatUI.FlatButton();
@@ -99,15 +148,15 @@
             this.flatLabel4 = new FlatUI.FlatLabel();
             this.monoFlat_Separator4 = new MonoFlat.MonoFlat_Separator();
             this.MiscToggle = new FlatUI.FlatToggle();
-            this.delay = new System.Windows.Forms.NumericUpDown();
-            this.flatLabel2 = new FlatUI.FlatLabel();
             this.formSkin1.SuspendLayout();
             this.flatTabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Firerate)).BeginInit();
-            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.delay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Firerate)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // formSkin1
@@ -180,8 +229,10 @@
             // 
             this.flatTabControl1.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
             this.flatTabControl1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.flatTabControl1.Controls.Add(this.tabPage1);
+            this.flatTabControl1.Controls.Add(this.tabPage5);
             this.flatTabControl1.Controls.Add(this.tabPage3);
+            this.flatTabControl1.Controls.Add(this.tabPage2);
+            this.flatTabControl1.Controls.Add(this.tabPage1);
             this.flatTabControl1.Controls.Add(this.tabPage4);
             this.flatTabControl1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.flatTabControl1.ItemSize = new System.Drawing.Size(120, 40);
@@ -192,304 +243,59 @@
             this.flatTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.flatTabControl1.TabIndex = 1;
             // 
-            // tabPage1
+            // tabPage5
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
-            this.tabPage1.Controls.Add(this.ChamBomberBtn);
-            this.tabPage1.Controls.Add(this.flatLabel19);
-            this.tabPage1.Controls.Add(this.EnemyChamBtn);
-            this.tabPage1.Controls.Add(this.flatLabel21);
-            this.tabPage1.Controls.Add(this.TeamChamBtn);
-            this.tabPage1.Controls.Add(this.flatLabel22);
-            this.tabPage1.Controls.Add(this.BomberGlowBtn);
-            this.tabPage1.Controls.Add(this.flatLabel17);
-            this.tabPage1.Controls.Add(this.EnemyGlowColorBtn);
-            this.tabPage1.Controls.Add(this.flatLabel16);
-            this.tabPage1.Controls.Add(this.flatLabel18);
-            this.tabPage1.Controls.Add(this.flatListBox2);
-            this.tabPage1.Controls.Add(this.flatLabel20);
-            this.tabPage1.Controls.Add(this.TeamGlowColorBtn);
-            this.tabPage1.Controls.Add(this.flatLabel15);
-            this.tabPage1.Controls.Add(this.flatLabel12);
-            this.tabPage1.Controls.Add(this.ChamHealth);
-            this.tabPage1.Controls.Add(this.flatLabel13);
-            this.tabPage1.Controls.Add(this.ChamBomber);
-            this.tabPage1.Controls.Add(this.flatLabel14);
-            this.tabPage1.Controls.Add(this.ChamTeam);
-            this.tabPage1.Controls.Add(this.monoFlat_Separator5);
-            this.tabPage1.Controls.Add(this.flatLabel11);
-            this.tabPage1.Controls.Add(this.ChamsToggle);
-            this.tabPage1.Controls.Add(this.flatLabel10);
-            this.tabPage1.Controls.Add(this.GlowHealth);
-            this.tabPage1.Controls.Add(this.flatLabel9);
-            this.tabPage1.Controls.Add(this.GlowBomber);
-            this.tabPage1.Controls.Add(this.flatListBox1);
-            this.tabPage1.Controls.Add(this.flatLabel5);
-            this.tabPage1.Controls.Add(this.GlowTeam);
-            this.tabPage1.Controls.Add(this.flatLabel1);
-            this.tabPage1.Controls.Add(this.monoFlat_Separator1);
-            this.tabPage1.Controls.Add(this.GlowToggle);
-            this.tabPage1.Location = new System.Drawing.Point(4, 44);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(828, 312);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Visuals";
-            // 
-            // ChamBomberBtn
-            // 
-            this.ChamBomberBtn.Location = new System.Drawing.Point(579, 275);
-            this.ChamBomberBtn.Name = "ChamBomberBtn";
-            this.ChamBomberBtn.Size = new System.Drawing.Size(219, 20);
-            this.ChamBomberBtn.TabIndex = 48;
-            this.ChamBomberBtn.UseVisualStyleBackColor = true;
-            this.ChamBomberBtn.Click += new System.EventHandler(this.ChamBomberBtn_Click);
-            // 
-            // flatLabel19
-            // 
-            this.flatLabel19.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel19.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel19.ForeColor = System.Drawing.Color.White;
-            this.flatLabel19.Location = new System.Drawing.Point(579, 237);
-            this.flatLabel19.Name = "flatLabel19";
-            this.flatLabel19.Size = new System.Drawing.Size(219, 35);
-            this.flatLabel19.TabIndex = 47;
-            this.flatLabel19.Text = "Bomb Carrier";
-            this.flatLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // EnemyChamBtn
-            // 
-            this.EnemyChamBtn.Location = new System.Drawing.Point(581, 203);
-            this.EnemyChamBtn.Name = "EnemyChamBtn";
-            this.EnemyChamBtn.Size = new System.Drawing.Size(219, 20);
-            this.EnemyChamBtn.TabIndex = 46;
-            this.EnemyChamBtn.UseVisualStyleBackColor = true;
-            this.EnemyChamBtn.Click += new System.EventHandler(this.EnemyChamBtn_Click);
-            // 
-            // flatLabel21
-            // 
-            this.flatLabel21.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel21.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel21.ForeColor = System.Drawing.Color.White;
-            this.flatLabel21.Location = new System.Drawing.Point(581, 165);
-            this.flatLabel21.Name = "flatLabel21";
-            this.flatLabel21.Size = new System.Drawing.Size(219, 35);
-            this.flatLabel21.TabIndex = 45;
-            this.flatLabel21.Text = "Enemies";
-            this.flatLabel21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TeamChamBtn
-            // 
-            this.TeamChamBtn.Location = new System.Drawing.Point(581, 133);
-            this.TeamChamBtn.Name = "TeamChamBtn";
-            this.TeamChamBtn.Size = new System.Drawing.Size(219, 20);
-            this.TeamChamBtn.TabIndex = 44;
-            this.TeamChamBtn.UseVisualStyleBackColor = true;
-            this.TeamChamBtn.Click += new System.EventHandler(this.TeamChamBtn_Click);
-            // 
-            // flatLabel22
-            // 
-            this.flatLabel22.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel22.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel22.ForeColor = System.Drawing.Color.White;
-            this.flatLabel22.Location = new System.Drawing.Point(581, 95);
-            this.flatLabel22.Name = "flatLabel22";
-            this.flatLabel22.Size = new System.Drawing.Size(219, 35);
-            this.flatLabel22.TabIndex = 43;
-            this.flatLabel22.Text = "Teammates";
-            this.flatLabel22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // BomberGlowBtn
-            // 
-            this.BomberGlowBtn.Location = new System.Drawing.Point(330, 275);
-            this.BomberGlowBtn.Name = "BomberGlowBtn";
-            this.BomberGlowBtn.Size = new System.Drawing.Size(219, 20);
-            this.BomberGlowBtn.TabIndex = 42;
-            this.BomberGlowBtn.UseVisualStyleBackColor = true;
-            this.BomberGlowBtn.Click += new System.EventHandler(this.BomberGlowBtn_Click);
-            // 
-            // flatLabel17
-            // 
-            this.flatLabel17.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel17.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel17.ForeColor = System.Drawing.Color.White;
-            this.flatLabel17.Location = new System.Drawing.Point(330, 237);
-            this.flatLabel17.Name = "flatLabel17";
-            this.flatLabel17.Size = new System.Drawing.Size(219, 35);
-            this.flatLabel17.TabIndex = 41;
-            this.flatLabel17.Text = "Bomb Carrier";
-            this.flatLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // EnemyGlowColorBtn
-            // 
-            this.EnemyGlowColorBtn.Location = new System.Drawing.Point(332, 203);
-            this.EnemyGlowColorBtn.Name = "EnemyGlowColorBtn";
-            this.EnemyGlowColorBtn.Size = new System.Drawing.Size(219, 20);
-            this.EnemyGlowColorBtn.TabIndex = 40;
-            this.EnemyGlowColorBtn.UseVisualStyleBackColor = true;
-            this.EnemyGlowColorBtn.Click += new System.EventHandler(this.EnemyGlowColorBtn_Click);
-            // 
-            // flatLabel16
-            // 
-            this.flatLabel16.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel16.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel16.ForeColor = System.Drawing.Color.White;
-            this.flatLabel16.Location = new System.Drawing.Point(332, 165);
-            this.flatLabel16.Name = "flatLabel16";
-            this.flatLabel16.Size = new System.Drawing.Size(219, 35);
-            this.flatLabel16.TabIndex = 39;
-            this.flatLabel16.Text = "Enemies";
-            this.flatLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // flatLabel18
-            // 
-            this.flatLabel18.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel18.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel18.ForeColor = System.Drawing.Color.White;
-            this.flatLabel18.Location = new System.Drawing.Point(580, 68);
-            this.flatLabel18.Name = "flatLabel18";
-            this.flatLabel18.Size = new System.Drawing.Size(220, 23);
-            this.flatLabel18.TabIndex = 38;
-            this.flatLabel18.Text = "Chams Colors";
-            this.flatLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // flatListBox2
-            // 
-            this.flatListBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.flatListBox2.items = new string[] {
-        ""};
-            this.flatListBox2.Location = new System.Drawing.Point(569, 61);
-            this.flatListBox2.Name = "flatListBox2";
-            this.flatListBox2.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.flatListBox2.Size = new System.Drawing.Size(244, 245);
-            this.flatListBox2.TabIndex = 31;
-            this.flatListBox2.Text = "flatListBox2";
-            // 
-            // flatLabel20
-            // 
-            this.flatLabel20.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel20.ForeColor = System.Drawing.Color.White;
-            this.flatLabel20.Location = new System.Drawing.Point(331, 68);
-            this.flatLabel20.Name = "flatLabel20";
-            this.flatLabel20.Size = new System.Drawing.Size(220, 23);
-            this.flatLabel20.TabIndex = 30;
-            this.flatLabel20.Text = "Glow Colors";
-            this.flatLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // TeamGlowColorBtn
-            // 
-            this.TeamGlowColorBtn.Location = new System.Drawing.Point(332, 133);
-            this.TeamGlowColorBtn.Name = "TeamGlowColorBtn";
-            this.TeamGlowColorBtn.Size = new System.Drawing.Size(219, 20);
-            this.TeamGlowColorBtn.TabIndex = 22;
-            this.TeamGlowColorBtn.UseVisualStyleBackColor = true;
-            this.TeamGlowColorBtn.Click += new System.EventHandler(this.TeamGlowColorBtn_Click);
-            // 
-            // flatLabel15
-            // 
-            this.flatLabel15.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel15.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel15.ForeColor = System.Drawing.Color.White;
-            this.flatLabel15.Location = new System.Drawing.Point(332, 95);
-            this.flatLabel15.Name = "flatLabel15";
-            this.flatLabel15.Size = new System.Drawing.Size(219, 35);
-            this.flatLabel15.TabIndex = 21;
-            this.flatLabel15.Text = "Teammates";
-            this.flatLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // flatLabel12
-            // 
-            this.flatLabel12.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel12.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel12.ForeColor = System.Drawing.Color.White;
-            this.flatLabel12.Location = new System.Drawing.Point(90, 267);
-            this.flatLabel12.Name = "flatLabel12";
-            this.flatLabel12.Size = new System.Drawing.Size(198, 33);
-            this.flatLabel12.TabIndex = 18;
-            this.flatLabel12.Text = "Health Chams";
-            this.flatLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ChamHealth
-            // 
-            this.ChamHealth.BackColor = System.Drawing.Color.Transparent;
-            this.ChamHealth.Checked = false;
-            this.ChamHealth.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ChamHealth.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ChamHealth.Location = new System.Drawing.Point(8, 267);
-            this.ChamHealth.Name = "ChamHealth";
-            this.ChamHealth.Options = FlatUI.FlatToggle._Options.Style3;
-            this.ChamHealth.Size = new System.Drawing.Size(76, 33);
-            this.ChamHealth.TabIndex = 17;
-            this.ChamHealth.Text = "flatToggle6";
-            // 
-            // flatLabel13
-            // 
-            this.flatLabel13.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel13.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel13.ForeColor = System.Drawing.Color.White;
-            this.flatLabel13.Location = new System.Drawing.Point(90, 228);
-            this.flatLabel13.Name = "flatLabel13";
-            this.flatLabel13.Size = new System.Drawing.Size(224, 33);
-            this.flatLabel13.TabIndex = 16;
-            this.flatLabel13.Text = "Bomber Chams";
-            this.flatLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ChamBomber
-            // 
-            this.ChamBomber.BackColor = System.Drawing.Color.Transparent;
-            this.ChamBomber.Checked = false;
-            this.ChamBomber.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ChamBomber.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ChamBomber.Location = new System.Drawing.Point(6, 228);
-            this.ChamBomber.Name = "ChamBomber";
-            this.ChamBomber.Options = FlatUI.FlatToggle._Options.Style3;
-            this.ChamBomber.Size = new System.Drawing.Size(76, 33);
-            this.ChamBomber.TabIndex = 15;
-            this.ChamBomber.Text = "flatToggle7";
-            // 
-            // flatLabel14
-            // 
-            this.flatLabel14.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel14.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel14.ForeColor = System.Drawing.Color.White;
-            this.flatLabel14.Location = new System.Drawing.Point(90, 189);
-            this.flatLabel14.Name = "flatLabel14";
-            this.flatLabel14.Size = new System.Drawing.Size(208, 33);
-            this.flatLabel14.TabIndex = 14;
-            this.flatLabel14.Text = "Team Chams";
-            this.flatLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ChamTeam
-            // 
-            this.ChamTeam.BackColor = System.Drawing.Color.Transparent;
-            this.ChamTeam.Checked = true;
-            this.ChamTeam.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ChamTeam.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ChamTeam.Location = new System.Drawing.Point(6, 189);
-            this.ChamTeam.Name = "ChamTeam";
-            this.ChamTeam.Options = FlatUI.FlatToggle._Options.Style3;
-            this.ChamTeam.Size = new System.Drawing.Size(76, 33);
-            this.ChamTeam.TabIndex = 13;
-            this.ChamTeam.Text = "flatToggle8";
-            // 
-            // monoFlat_Separator5
-            // 
-            this.monoFlat_Separator5.Location = new System.Drawing.Point(9, 176);
-            this.monoFlat_Separator5.Name = "monoFlat_Separator5";
-            this.monoFlat_Separator5.Size = new System.Drawing.Size(305, 10);
-            this.monoFlat_Separator5.TabIndex = 12;
-            this.monoFlat_Separator5.Text = "monoFlat_Separator5";
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage5.Controls.Add(this.flatLabel11);
+            this.tabPage5.Controls.Add(this.ChamsToggle);
+            this.tabPage5.Controls.Add(this.flatLabel12);
+            this.tabPage5.Controls.Add(this.flatLabel14);
+            this.tabPage5.Controls.Add(this.ChamHealth);
+            this.tabPage5.Controls.Add(this.ChamTeam);
+            this.tabPage5.Controls.Add(this.monoFlat_Separator10);
+            this.tabPage5.Controls.Add(this.flatLabel10);
+            this.tabPage5.Controls.Add(this.GlowHealth);
+            this.tabPage5.Controls.Add(this.flatLabel5);
+            this.tabPage5.Controls.Add(this.GlowTeam);
+            this.tabPage5.Controls.Add(this.monoFlat_Separator9);
+            this.tabPage5.Controls.Add(this.flatLabel35);
+            this.tabPage5.Controls.Add(this.OtherVisualsCheck);
+            this.tabPage5.Controls.Add(this.flatLabel1);
+            this.tabPage5.Controls.Add(this.GlowToggle);
+            this.tabPage5.Controls.Add(this.flatListBox4);
+            this.tabPage5.Controls.Add(this.TeamLabels);
+            this.tabPage5.Controls.Add(this.flatLabel33);
+            this.tabPage5.Controls.Add(this.Labels);
+            this.tabPage5.Controls.Add(this.flatLabel34);
+            this.tabPage5.Controls.Add(this.monoFlat_Separator8);
+            this.tabPage5.Controls.Add(this.TracersTeam);
+            this.tabPage5.Controls.Add(this.flatLabel31);
+            this.tabPage5.Controls.Add(this.Tracers);
+            this.tabPage5.Controls.Add(this.flatLabel32);
+            this.tabPage5.Controls.Add(this.monoFlat_Separator7);
+            this.tabPage5.Controls.Add(this.ESPTeam);
+            this.tabPage5.Controls.Add(this.flatLabel30);
+            this.tabPage5.Controls.Add(this.BoxESPCheck);
+            this.tabPage5.Controls.Add(this.flatLabel29);
+            this.tabPage5.Controls.Add(this.flatLabel28);
+            this.tabPage5.Controls.Add(this.flatToggle1);
+            this.tabPage5.Controls.Add(this.monoFlat_Separator2);
+            this.tabPage5.Location = new System.Drawing.Point(4, 44);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(828, 312);
+            this.tabPage5.TabIndex = 5;
+            this.tabPage5.Text = "Visuals";
             // 
             // flatLabel11
             // 
             this.flatLabel11.BackColor = System.Drawing.Color.Transparent;
             this.flatLabel11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flatLabel11.ForeColor = System.Drawing.Color.White;
-            this.flatLabel11.Location = new System.Drawing.Point(561, 6);
+            this.flatLabel11.Location = new System.Drawing.Point(563, 191);
             this.flatLabel11.Name = "flatLabel11";
             this.flatLabel11.Size = new System.Drawing.Size(177, 33);
-            this.flatLabel11.TabIndex = 11;
+            this.flatLabel11.TabIndex = 53;
             this.flatLabel11.Text = "Visible Chams";
             this.flatLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -500,24 +306,82 @@
             this.ChamsToggle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ChamsToggle.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.ChamsToggle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ChamsToggle.Location = new System.Drawing.Point(744, 6);
+            this.ChamsToggle.Location = new System.Drawing.Point(746, 191);
             this.ChamsToggle.Name = "ChamsToggle";
             this.ChamsToggle.Options = FlatUI.FlatToggle._Options.Style1;
             this.ChamsToggle.Size = new System.Drawing.Size(76, 33);
-            this.ChamsToggle.TabIndex = 10;
+            this.ChamsToggle.TabIndex = 52;
             this.ChamsToggle.Text = "flatToggle1";
+            // 
+            // flatLabel12
+            // 
+            this.flatLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel12.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel12.ForeColor = System.Drawing.Color.White;
+            this.flatLabel12.Location = new System.Drawing.Point(542, 268);
+            this.flatLabel12.Name = "flatLabel12";
+            this.flatLabel12.Size = new System.Drawing.Size(198, 33);
+            this.flatLabel12.TabIndex = 51;
+            this.flatLabel12.Text = "Health Chams";
+            this.flatLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // flatLabel14
+            // 
+            this.flatLabel14.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel14.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel14.ForeColor = System.Drawing.Color.White;
+            this.flatLabel14.Location = new System.Drawing.Point(532, 230);
+            this.flatLabel14.Name = "flatLabel14";
+            this.flatLabel14.Size = new System.Drawing.Size(208, 33);
+            this.flatLabel14.TabIndex = 50;
+            this.flatLabel14.Text = "Team Chams";
+            this.flatLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // ChamHealth
+            // 
+            this.ChamHealth.BackColor = System.Drawing.Color.Transparent;
+            this.ChamHealth.Checked = false;
+            this.ChamHealth.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ChamHealth.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ChamHealth.Location = new System.Drawing.Point(746, 269);
+            this.ChamHealth.Name = "ChamHealth";
+            this.ChamHealth.Options = FlatUI.FlatToggle._Options.Style3;
+            this.ChamHealth.Size = new System.Drawing.Size(76, 33);
+            this.ChamHealth.TabIndex = 49;
+            this.ChamHealth.Text = "flatToggle6";
+            // 
+            // ChamTeam
+            // 
+            this.ChamTeam.BackColor = System.Drawing.Color.Transparent;
+            this.ChamTeam.Checked = true;
+            this.ChamTeam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ChamTeam.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ChamTeam.Location = new System.Drawing.Point(746, 230);
+            this.ChamTeam.Name = "ChamTeam";
+            this.ChamTeam.Options = FlatUI.FlatToggle._Options.Style3;
+            this.ChamTeam.Size = new System.Drawing.Size(76, 33);
+            this.ChamTeam.TabIndex = 48;
+            this.ChamTeam.Text = "flatToggle8";
+            // 
+            // monoFlat_Separator10
+            // 
+            this.monoFlat_Separator10.Location = new System.Drawing.Point(448, 175);
+            this.monoFlat_Separator10.Name = "monoFlat_Separator10";
+            this.monoFlat_Separator10.Size = new System.Drawing.Size(372, 10);
+            this.monoFlat_Separator10.TabIndex = 47;
+            this.monoFlat_Separator10.Text = "monoFlat_Separator10";
             // 
             // flatLabel10
             // 
             this.flatLabel10.BackColor = System.Drawing.Color.Transparent;
             this.flatLabel10.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flatLabel10.ForeColor = System.Drawing.Color.White;
-            this.flatLabel10.Location = new System.Drawing.Point(90, 136);
+            this.flatLabel10.Location = new System.Drawing.Point(542, 139);
             this.flatLabel10.Name = "flatLabel10";
             this.flatLabel10.Size = new System.Drawing.Size(198, 33);
-            this.flatLabel10.TabIndex = 9;
+            this.flatLabel10.TabIndex = 46;
             this.flatLabel10.Text = "Glow Health";
-            this.flatLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.flatLabel10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // GlowHealth
             // 
@@ -525,61 +389,24 @@
             this.GlowHealth.Checked = false;
             this.GlowHealth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GlowHealth.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.GlowHealth.Location = new System.Drawing.Point(6, 137);
+            this.GlowHealth.Location = new System.Drawing.Point(746, 139);
             this.GlowHealth.Name = "GlowHealth";
             this.GlowHealth.Options = FlatUI.FlatToggle._Options.Style3;
             this.GlowHealth.Size = new System.Drawing.Size(76, 33);
-            this.GlowHealth.TabIndex = 8;
+            this.GlowHealth.TabIndex = 45;
             this.GlowHealth.Text = "flatToggle4";
-            // 
-            // flatLabel9
-            // 
-            this.flatLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel9.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel9.ForeColor = System.Drawing.Color.White;
-            this.flatLabel9.Location = new System.Drawing.Point(90, 97);
-            this.flatLabel9.Name = "flatLabel9";
-            this.flatLabel9.Size = new System.Drawing.Size(224, 33);
-            this.flatLabel9.TabIndex = 7;
-            this.flatLabel9.Text = "Glow Bomber";
-            this.flatLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // GlowBomber
-            // 
-            this.GlowBomber.BackColor = System.Drawing.Color.Transparent;
-            this.GlowBomber.Checked = false;
-            this.GlowBomber.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GlowBomber.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.GlowBomber.Location = new System.Drawing.Point(6, 97);
-            this.GlowBomber.Name = "GlowBomber";
-            this.GlowBomber.Options = FlatUI.FlatToggle._Options.Style3;
-            this.GlowBomber.Size = new System.Drawing.Size(76, 33);
-            this.GlowBomber.TabIndex = 6;
-            this.GlowBomber.Text = "flatToggle1";
-            // 
-            // flatListBox1
-            // 
-            this.flatListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
-            this.flatListBox1.items = new string[] {
-        ""};
-            this.flatListBox1.Location = new System.Drawing.Point(320, 61);
-            this.flatListBox1.Name = "flatListBox1";
-            this.flatListBox1.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
-            this.flatListBox1.Size = new System.Drawing.Size(243, 245);
-            this.flatListBox1.TabIndex = 5;
-            this.flatListBox1.Text = "flatListBox1";
             // 
             // flatLabel5
             // 
             this.flatLabel5.BackColor = System.Drawing.Color.Transparent;
             this.flatLabel5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flatLabel5.ForeColor = System.Drawing.Color.White;
-            this.flatLabel5.Location = new System.Drawing.Point(90, 58);
+            this.flatLabel5.Location = new System.Drawing.Point(532, 100);
             this.flatLabel5.Name = "flatLabel5";
             this.flatLabel5.Size = new System.Drawing.Size(208, 33);
-            this.flatLabel5.TabIndex = 4;
+            this.flatLabel5.TabIndex = 44;
             this.flatLabel5.Text = "Glow Teammates";
-            this.flatLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.flatLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // GlowTeam
             // 
@@ -587,32 +414,58 @@
             this.GlowTeam.Checked = true;
             this.GlowTeam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GlowTeam.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.GlowTeam.Location = new System.Drawing.Point(6, 58);
+            this.GlowTeam.Location = new System.Drawing.Point(746, 100);
             this.GlowTeam.Name = "GlowTeam";
             this.GlowTeam.Options = FlatUI.FlatToggle._Options.Style3;
             this.GlowTeam.Size = new System.Drawing.Size(76, 33);
-            this.GlowTeam.TabIndex = 3;
+            this.GlowTeam.TabIndex = 43;
             this.GlowTeam.Text = "flatToggle3";
+            // 
+            // monoFlat_Separator9
+            // 
+            this.monoFlat_Separator9.Location = new System.Drawing.Point(448, 45);
+            this.monoFlat_Separator9.Name = "monoFlat_Separator9";
+            this.monoFlat_Separator9.Size = new System.Drawing.Size(369, 10);
+            this.monoFlat_Separator9.TabIndex = 42;
+            this.monoFlat_Separator9.Text = "monoFlat_Separator9";
+            // 
+            // flatLabel35
+            // 
+            this.flatLabel35.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel35.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel35.ForeColor = System.Drawing.Color.White;
+            this.flatLabel35.Location = new System.Drawing.Point(442, 6);
+            this.flatLabel35.Name = "flatLabel35";
+            this.flatLabel35.Size = new System.Drawing.Size(301, 33);
+            this.flatLabel35.TabIndex = 41;
+            this.flatLabel35.Text = "Other Visuals (No Overlay)";
+            this.flatLabel35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // OtherVisualsCheck
+            // 
+            this.OtherVisualsCheck.BackColor = System.Drawing.Color.Transparent;
+            this.OtherVisualsCheck.Checked = false;
+            this.OtherVisualsCheck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OtherVisualsCheck.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.OtherVisualsCheck.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.OtherVisualsCheck.Location = new System.Drawing.Point(746, 6);
+            this.OtherVisualsCheck.Name = "OtherVisualsCheck";
+            this.OtherVisualsCheck.Options = FlatUI.FlatToggle._Options.Style1;
+            this.OtherVisualsCheck.Size = new System.Drawing.Size(76, 33);
+            this.OtherVisualsCheck.TabIndex = 40;
+            this.OtherVisualsCheck.Text = "flatToggle8";
             // 
             // flatLabel1
             // 
             this.flatLabel1.BackColor = System.Drawing.Color.Transparent;
             this.flatLabel1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flatLabel1.ForeColor = System.Drawing.Color.White;
-            this.flatLabel1.Location = new System.Drawing.Point(90, 6);
+            this.flatLabel1.Location = new System.Drawing.Point(531, 61);
             this.flatLabel1.Name = "flatLabel1";
-            this.flatLabel1.Size = new System.Drawing.Size(100, 33);
-            this.flatLabel1.TabIndex = 2;
-            this.flatLabel1.Text = "Glow";
-            this.flatLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // monoFlat_Separator1
-            // 
-            this.monoFlat_Separator1.Location = new System.Drawing.Point(3, 45);
-            this.monoFlat_Separator1.Name = "monoFlat_Separator1";
-            this.monoFlat_Separator1.Size = new System.Drawing.Size(811, 10);
-            this.monoFlat_Separator1.TabIndex = 1;
-            this.monoFlat_Separator1.Text = "monoFlat_Separator1";
+            this.flatLabel1.Size = new System.Drawing.Size(209, 33);
+            this.flatLabel1.TabIndex = 39;
+            this.flatLabel1.Text = "Glow - Enabled";
+            this.flatLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // GlowToggle
             // 
@@ -621,12 +474,225 @@
             this.GlowToggle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GlowToggle.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.GlowToggle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.GlowToggle.Location = new System.Drawing.Point(6, 6);
+            this.GlowToggle.Location = new System.Drawing.Point(746, 61);
             this.GlowToggle.Name = "GlowToggle";
             this.GlowToggle.Options = FlatUI.FlatToggle._Options.Style1;
             this.GlowToggle.Size = new System.Drawing.Size(76, 33);
-            this.GlowToggle.TabIndex = 0;
+            this.GlowToggle.TabIndex = 38;
             this.GlowToggle.Text = "flatToggle1";
+            // 
+            // flatListBox4
+            // 
+            this.flatListBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatListBox4.items = new string[] {
+        ""};
+            this.flatListBox4.Location = new System.Drawing.Point(432, 10);
+            this.flatListBox4.Name = "flatListBox4";
+            this.flatListBox4.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.flatListBox4.Size = new System.Drawing.Size(10, 295);
+            this.flatListBox4.TabIndex = 27;
+            this.flatListBox4.Text = "flatListBox4";
+            // 
+            // TeamLabels
+            // 
+            this.TeamLabels.BackColor = System.Drawing.Color.Transparent;
+            this.TeamLabels.Checked = true;
+            this.TeamLabels.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TeamLabels.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TeamLabels.Location = new System.Drawing.Point(6, 272);
+            this.TeamLabels.Name = "TeamLabels";
+            this.TeamLabels.Options = FlatUI.FlatToggle._Options.Style3;
+            this.TeamLabels.Size = new System.Drawing.Size(76, 33);
+            this.TeamLabels.TabIndex = 36;
+            this.TeamLabels.Text = "HealthBox";
+            // 
+            // flatLabel33
+            // 
+            this.flatLabel33.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel33.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel33.ForeColor = System.Drawing.Color.White;
+            this.flatLabel33.Location = new System.Drawing.Point(88, 272);
+            this.flatLabel33.Name = "flatLabel33";
+            this.flatLabel33.Size = new System.Drawing.Size(318, 33);
+            this.flatLabel33.TabIndex = 37;
+            this.flatLabel33.Text = "Name Label - Show Team";
+            this.flatLabel33.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Labels
+            // 
+            this.Labels.BackColor = System.Drawing.Color.Transparent;
+            this.Labels.Checked = false;
+            this.Labels.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Labels.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Labels.Location = new System.Drawing.Point(6, 233);
+            this.Labels.Name = "Labels";
+            this.Labels.Options = FlatUI.FlatToggle._Options.Style1;
+            this.Labels.Size = new System.Drawing.Size(76, 33);
+            this.Labels.TabIndex = 34;
+            this.Labels.Text = "HealthBox";
+            // 
+            // flatLabel34
+            // 
+            this.flatLabel34.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel34.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel34.ForeColor = System.Drawing.Color.White;
+            this.flatLabel34.Location = new System.Drawing.Point(88, 233);
+            this.flatLabel34.Name = "flatLabel34";
+            this.flatLabel34.Size = new System.Drawing.Size(318, 33);
+            this.flatLabel34.TabIndex = 35;
+            this.flatLabel34.Text = "Name Label - Enabled";
+            this.flatLabel34.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // monoFlat_Separator8
+            // 
+            this.monoFlat_Separator8.Location = new System.Drawing.Point(6, 220);
+            this.monoFlat_Separator8.Name = "monoFlat_Separator8";
+            this.monoFlat_Separator8.Size = new System.Drawing.Size(420, 10);
+            this.monoFlat_Separator8.TabIndex = 33;
+            this.monoFlat_Separator8.Text = "monoFlat_Separator8";
+            // 
+            // TracersTeam
+            // 
+            this.TracersTeam.BackColor = System.Drawing.Color.Transparent;
+            this.TracersTeam.Checked = true;
+            this.TracersTeam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TracersTeam.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.TracersTeam.Location = new System.Drawing.Point(6, 185);
+            this.TracersTeam.Name = "TracersTeam";
+            this.TracersTeam.Options = FlatUI.FlatToggle._Options.Style3;
+            this.TracersTeam.Size = new System.Drawing.Size(76, 33);
+            this.TracersTeam.TabIndex = 31;
+            this.TracersTeam.Text = "TracersTeam";
+            // 
+            // flatLabel31
+            // 
+            this.flatLabel31.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel31.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel31.ForeColor = System.Drawing.Color.White;
+            this.flatLabel31.Location = new System.Drawing.Point(88, 185);
+            this.flatLabel31.Name = "flatLabel31";
+            this.flatLabel31.Size = new System.Drawing.Size(303, 33);
+            this.flatLabel31.TabIndex = 32;
+            this.flatLabel31.Text = "Tracers - Show Team";
+            this.flatLabel31.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Tracers
+            // 
+            this.Tracers.BackColor = System.Drawing.Color.Transparent;
+            this.Tracers.Checked = false;
+            this.Tracers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Tracers.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Tracers.Location = new System.Drawing.Point(6, 146);
+            this.Tracers.Name = "Tracers";
+            this.Tracers.Options = FlatUI.FlatToggle._Options.Style1;
+            this.Tracers.Size = new System.Drawing.Size(76, 33);
+            this.Tracers.TabIndex = 29;
+            this.Tracers.Text = "TracersEnabled";
+            // 
+            // flatLabel32
+            // 
+            this.flatLabel32.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel32.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel32.ForeColor = System.Drawing.Color.White;
+            this.flatLabel32.Location = new System.Drawing.Point(88, 146);
+            this.flatLabel32.Name = "flatLabel32";
+            this.flatLabel32.Size = new System.Drawing.Size(318, 33);
+            this.flatLabel32.TabIndex = 30;
+            this.flatLabel32.Text = "Tracers - Enabled";
+            this.flatLabel32.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // monoFlat_Separator7
+            // 
+            this.monoFlat_Separator7.Location = new System.Drawing.Point(6, 133);
+            this.monoFlat_Separator7.Name = "monoFlat_Separator7";
+            this.monoFlat_Separator7.Size = new System.Drawing.Size(420, 10);
+            this.monoFlat_Separator7.TabIndex = 28;
+            this.monoFlat_Separator7.Text = "monoFlat_Separator7";
+            // 
+            // ESPTeam
+            // 
+            this.ESPTeam.BackColor = System.Drawing.Color.Transparent;
+            this.ESPTeam.Checked = true;
+            this.ESPTeam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ESPTeam.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ESPTeam.Location = new System.Drawing.Point(6, 97);
+            this.ESPTeam.Name = "ESPTeam";
+            this.ESPTeam.Options = FlatUI.FlatToggle._Options.Style3;
+            this.ESPTeam.Size = new System.Drawing.Size(76, 33);
+            this.ESPTeam.TabIndex = 7;
+            this.ESPTeam.Text = "ESPShowTeamCheck";
+            // 
+            // flatLabel30
+            // 
+            this.flatLabel30.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel30.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel30.ForeColor = System.Drawing.Color.White;
+            this.flatLabel30.Location = new System.Drawing.Point(88, 97);
+            this.flatLabel30.Name = "flatLabel30";
+            this.flatLabel30.Size = new System.Drawing.Size(372, 33);
+            this.flatLabel30.TabIndex = 8;
+            this.flatLabel30.Text = "Box ESP - Show Team";
+            this.flatLabel30.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // BoxESPCheck
+            // 
+            this.BoxESPCheck.BackColor = System.Drawing.Color.Transparent;
+            this.BoxESPCheck.Checked = false;
+            this.BoxESPCheck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BoxESPCheck.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.BoxESPCheck.Location = new System.Drawing.Point(6, 58);
+            this.BoxESPCheck.Name = "BoxESPCheck";
+            this.BoxESPCheck.Options = FlatUI.FlatToggle._Options.Style1;
+            this.BoxESPCheck.Size = new System.Drawing.Size(76, 33);
+            this.BoxESPCheck.TabIndex = 5;
+            this.BoxESPCheck.Text = "BoxESPCheck";
+            // 
+            // flatLabel29
+            // 
+            this.flatLabel29.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel29.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel29.ForeColor = System.Drawing.Color.White;
+            this.flatLabel29.Location = new System.Drawing.Point(88, 58);
+            this.flatLabel29.Name = "flatLabel29";
+            this.flatLabel29.Size = new System.Drawing.Size(372, 33);
+            this.flatLabel29.TabIndex = 6;
+            this.flatLabel29.Text = "Box ESP Enabled";
+            this.flatLabel29.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // flatLabel28
+            // 
+            this.flatLabel28.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel28.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel28.ForeColor = System.Drawing.Color.White;
+            this.flatLabel28.Location = new System.Drawing.Point(88, 6);
+            this.flatLabel28.Name = "flatLabel28";
+            this.flatLabel28.Size = new System.Drawing.Size(372, 33);
+            this.flatLabel28.TabIndex = 4;
+            this.flatLabel28.Text = "Overlay Enabled (FPS Warning)";
+            this.flatLabel28.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // flatToggle1
+            // 
+            this.flatToggle1.BackColor = System.Drawing.Color.Transparent;
+            this.flatToggle1.Checked = false;
+            this.flatToggle1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.flatToggle1.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.flatToggle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.flatToggle1.Location = new System.Drawing.Point(6, 6);
+            this.flatToggle1.Name = "flatToggle1";
+            this.flatToggle1.Options = FlatUI.FlatToggle._Options.Style1;
+            this.flatToggle1.Size = new System.Drawing.Size(76, 33);
+            this.flatToggle1.TabIndex = 3;
+            this.flatToggle1.Text = "flatToggle1";
+            this.flatToggle1.CheckedChanged += new FlatUI.FlatToggle.CheckedChangedEventHandler(this.flatToggle1_CheckedChanged);
+            // 
+            // monoFlat_Separator2
+            // 
+            this.monoFlat_Separator2.Location = new System.Drawing.Point(6, 45);
+            this.monoFlat_Separator2.Name = "monoFlat_Separator2";
+            this.monoFlat_Separator2.Size = new System.Drawing.Size(420, 10);
+            this.monoFlat_Separator2.TabIndex = 2;
+            this.monoFlat_Separator2.Text = "monoFlat_Separator2";
             // 
             // tabPage3
             // 
@@ -647,6 +713,39 @@
             this.tabPage3.Size = new System.Drawing.Size(828, 312);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Triggerbot";
+            // 
+            // delay
+            // 
+            this.delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.delay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.delay.ForeColor = System.Drawing.SystemColors.Window;
+            this.delay.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.delay.Location = new System.Drawing.Point(8, 176);
+            this.delay.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.delay.Name = "delay";
+            this.delay.Size = new System.Drawing.Size(74, 21);
+            this.delay.TabIndex = 18;
+            this.delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // flatLabel2
+            // 
+            this.flatLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel2.ForeColor = System.Drawing.Color.White;
+            this.flatLabel2.Location = new System.Drawing.Point(88, 166);
+            this.flatLabel2.Name = "flatLabel2";
+            this.flatLabel2.Size = new System.Drawing.Size(208, 36);
+            this.flatLabel2.TabIndex = 17;
+            this.flatLabel2.Text = "Shot Delay";
+            this.flatLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Firerate
             // 
@@ -764,6 +863,576 @@
             this.TriggerbotToggle.Size = new System.Drawing.Size(76, 33);
             this.TriggerbotToggle.TabIndex = 6;
             this.TriggerbotToggle.Text = "flatToggle1";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage2.Controls.Add(this.recoilcircle);
+            this.tabPage2.Controls.Add(this.flatLabel46);
+            this.tabPage2.Controls.Add(this.flatTrackBar1);
+            this.tabPage2.Controls.Add(this.flatLabel45);
+            this.tabPage2.Controls.Add(this.ShowFOVCrosshair);
+            this.tabPage2.Controls.Add(this.sdasd);
+            this.tabPage2.Controls.Add(this.flatLabel44);
+            this.tabPage2.Controls.Add(this.monoFlat_Separator1);
+            this.tabPage2.Controls.Add(this.Aimbot);
+            this.tabPage2.Location = new System.Drawing.Point(4, 44);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(828, 312);
+            this.tabPage2.TabIndex = 4;
+            this.tabPage2.Text = "Aimbot";
+            // 
+            // recoilcircle
+            // 
+            this.recoilcircle.BackColor = System.Drawing.Color.Transparent;
+            this.recoilcircle.Checked = false;
+            this.recoilcircle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.recoilcircle.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.recoilcircle.Location = new System.Drawing.Point(6, 150);
+            this.recoilcircle.Name = "recoilcircle";
+            this.recoilcircle.Options = FlatUI.FlatToggle._Options.Style3;
+            this.recoilcircle.Size = new System.Drawing.Size(76, 33);
+            this.recoilcircle.TabIndex = 16;
+            // 
+            // flatLabel46
+            // 
+            this.flatLabel46.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel46.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel46.ForeColor = System.Drawing.Color.White;
+            this.flatLabel46.Location = new System.Drawing.Point(88, 150);
+            this.flatLabel46.Name = "flatLabel46";
+            this.flatLabel46.Size = new System.Drawing.Size(372, 33);
+            this.flatLabel46.TabIndex = 17;
+            this.flatLabel46.Text = "Show Recoil Crosshair";
+            this.flatLabel46.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // flatTrackBar1
+            // 
+            this.flatTrackBar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.flatTrackBar1.HatchColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(148)))), ((int)(((byte)(92)))));
+            this.flatTrackBar1.Location = new System.Drawing.Point(13, 85);
+            this.flatTrackBar1.Maximum = 1100;
+            this.flatTrackBar1.Minimum = 0;
+            this.flatTrackBar1.Name = "flatTrackBar1";
+            this.flatTrackBar1.ShowValue = false;
+            this.flatTrackBar1.Size = new System.Drawing.Size(287, 23);
+            this.flatTrackBar1.Style = FlatUI.FlatTrackBar._Style.Slider;
+            this.flatTrackBar1.TabIndex = 15;
+            this.flatTrackBar1.Text = "FOVTrackBar";
+            this.flatTrackBar1.TrackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.flatTrackBar1.Value = 300;
+            // 
+            // flatLabel45
+            // 
+            this.flatLabel45.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel45.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel45.ForeColor = System.Drawing.Color.White;
+            this.flatLabel45.Location = new System.Drawing.Point(8, 58);
+            this.flatLabel45.Name = "flatLabel45";
+            this.flatLabel45.Size = new System.Drawing.Size(346, 23);
+            this.flatLabel45.TabIndex = 14;
+            this.flatLabel45.Text = "FOV Pixel Distance: 200";
+            this.flatLabel45.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ShowFOVCrosshair
+            // 
+            this.ShowFOVCrosshair.BackColor = System.Drawing.Color.Transparent;
+            this.ShowFOVCrosshair.Checked = false;
+            this.ShowFOVCrosshair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ShowFOVCrosshair.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ShowFOVCrosshair.Location = new System.Drawing.Point(6, 114);
+            this.ShowFOVCrosshair.Name = "ShowFOVCrosshair";
+            this.ShowFOVCrosshair.Options = FlatUI.FlatToggle._Options.Style3;
+            this.ShowFOVCrosshair.Size = new System.Drawing.Size(76, 33);
+            this.ShowFOVCrosshair.TabIndex = 12;
+            // 
+            // sdasd
+            // 
+            this.sdasd.BackColor = System.Drawing.Color.Transparent;
+            this.sdasd.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sdasd.ForeColor = System.Drawing.Color.White;
+            this.sdasd.Location = new System.Drawing.Point(88, 114);
+            this.sdasd.Name = "sdasd";
+            this.sdasd.Size = new System.Drawing.Size(372, 33);
+            this.sdasd.TabIndex = 13;
+            this.sdasd.Text = "Show FOV Circle";
+            this.sdasd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // flatLabel44
+            // 
+            this.flatLabel44.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel44.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel44.ForeColor = System.Drawing.Color.White;
+            this.flatLabel44.Location = new System.Drawing.Point(88, 6);
+            this.flatLabel44.Name = "flatLabel44";
+            this.flatLabel44.Size = new System.Drawing.Size(225, 33);
+            this.flatLabel44.TabIndex = 11;
+            this.flatLabel44.Text = "Aimbot";
+            this.flatLabel44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // monoFlat_Separator1
+            // 
+            this.monoFlat_Separator1.Location = new System.Drawing.Point(6, 45);
+            this.monoFlat_Separator1.Name = "monoFlat_Separator1";
+            this.monoFlat_Separator1.Size = new System.Drawing.Size(811, 10);
+            this.monoFlat_Separator1.TabIndex = 10;
+            this.monoFlat_Separator1.Text = "monoFlat_Separator1";
+            // 
+            // Aimbot
+            // 
+            this.Aimbot.BackColor = System.Drawing.Color.Transparent;
+            this.Aimbot.Checked = false;
+            this.Aimbot.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Aimbot.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.Aimbot.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Aimbot.Location = new System.Drawing.Point(6, 6);
+            this.Aimbot.Name = "Aimbot";
+            this.Aimbot.Options = FlatUI.FlatToggle._Options.Style1;
+            this.Aimbot.Size = new System.Drawing.Size(76, 33);
+            this.Aimbot.TabIndex = 9;
+            this.Aimbot.Text = "flatToggle1";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(73)))));
+            this.tabPage1.Controls.Add(this.EnemyChamBtn);
+            this.tabPage1.Controls.Add(this.EnemyTracerBtn);
+            this.tabPage1.Controls.Add(this.flatLabel15);
+            this.tabPage1.Controls.Add(this.flatLabel16);
+            this.tabPage1.Controls.Add(this.TeamTracerBtn);
+            this.tabPage1.Controls.Add(this.flatLabel18);
+            this.tabPage1.Controls.Add(this.flatListBox1);
+            this.tabPage1.Controls.Add(this.TeamESPColorBtn);
+            this.tabPage1.Controls.Add(this.flatLabel19);
+            this.tabPage1.Controls.Add(this.flatLabel20);
+            this.tabPage1.Controls.Add(this.EnemyESPColorBtn);
+            this.tabPage1.Controls.Add(this.flatLabel21);
+            this.tabPage1.Controls.Add(this.flatListBox2);
+            this.tabPage1.Controls.Add(this.EnemyGlowColorBtn);
+            this.tabPage1.Controls.Add(this.TeamGlowColorBtn);
+            this.tabPage1.Controls.Add(this.flatLabel22);
+            this.tabPage1.Controls.Add(this.flatLabel36);
+            this.tabPage1.Controls.Add(this.flatLabel37);
+            this.tabPage1.Controls.Add(this.flatListBox6);
+            this.tabPage1.Controls.Add(this.FovCircleBtn);
+            this.tabPage1.Controls.Add(this.flatLabel41);
+            this.tabPage1.Controls.Add(this.flatLabel42);
+            this.tabPage1.Controls.Add(this.CrosshairBtn);
+            this.tabPage1.Controls.Add(this.flatLabel43);
+            this.tabPage1.Controls.Add(this.flatListBox8);
+            this.tabPage1.Controls.Add(this.EnemyLabelBtn);
+            this.tabPage1.Controls.Add(this.flatLabel38);
+            this.tabPage1.Controls.Add(this.flatLabel39);
+            this.tabPage1.Controls.Add(this.TeamLabelBtn);
+            this.tabPage1.Controls.Add(this.flatLabel40);
+            this.tabPage1.Controls.Add(this.flatListBox7);
+            this.tabPage1.Controls.Add(this.TeamChamBtn);
+            this.tabPage1.Controls.Add(this.flatLabel9);
+            this.tabPage1.Controls.Add(this.flatLabel13);
+            this.tabPage1.Controls.Add(this.flatLabel17);
+            this.tabPage1.Controls.Add(this.flatListBox5);
+            this.tabPage1.Location = new System.Drawing.Point(4, 44);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(828, 312);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Colors";
+            // 
+            // EnemyChamBtn
+            // 
+            this.EnemyChamBtn.Location = new System.Drawing.Point(174, 238);
+            this.EnemyChamBtn.Name = "EnemyChamBtn";
+            this.EnemyChamBtn.Size = new System.Drawing.Size(64, 36);
+            this.EnemyChamBtn.TabIndex = 97;
+            this.EnemyChamBtn.UseVisualStyleBackColor = true;
+            this.EnemyChamBtn.Click += new System.EventHandler(this.EnemyChamBtn_Click);
+            // 
+            // EnemyTracerBtn
+            // 
+            this.EnemyTracerBtn.Location = new System.Drawing.Point(745, 104);
+            this.EnemyTracerBtn.Name = "EnemyTracerBtn";
+            this.EnemyTracerBtn.Size = new System.Drawing.Size(66, 35);
+            this.EnemyTracerBtn.TabIndex = 96;
+            this.EnemyTracerBtn.UseVisualStyleBackColor = true;
+            this.EnemyTracerBtn.Click += new System.EventHandler(this.EnemyTracerBtn_Click);
+            // 
+            // flatLabel15
+            // 
+            this.flatLabel15.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel15.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel15.ForeColor = System.Drawing.Color.White;
+            this.flatLabel15.Location = new System.Drawing.Point(590, 104);
+            this.flatLabel15.Name = "flatLabel15";
+            this.flatLabel15.Size = new System.Drawing.Size(149, 35);
+            this.flatLabel15.TabIndex = 95;
+            this.flatLabel15.Text = "Enemies";
+            this.flatLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatLabel16
+            // 
+            this.flatLabel16.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel16.ForeColor = System.Drawing.Color.White;
+            this.flatLabel16.Location = new System.Drawing.Point(590, 39);
+            this.flatLabel16.Name = "flatLabel16";
+            this.flatLabel16.Size = new System.Drawing.Size(221, 23);
+            this.flatLabel16.TabIndex = 94;
+            this.flatLabel16.Text = "Tracer Colors";
+            this.flatLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TeamTracerBtn
+            // 
+            this.TeamTracerBtn.Location = new System.Drawing.Point(745, 66);
+            this.TeamTracerBtn.Name = "TeamTracerBtn";
+            this.TeamTracerBtn.Size = new System.Drawing.Size(66, 35);
+            this.TeamTracerBtn.TabIndex = 93;
+            this.TeamTracerBtn.UseVisualStyleBackColor = true;
+            this.TeamTracerBtn.Click += new System.EventHandler(this.TeamTracerBtn_Click);
+            // 
+            // flatLabel18
+            // 
+            this.flatLabel18.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel18.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel18.ForeColor = System.Drawing.Color.White;
+            this.flatLabel18.Location = new System.Drawing.Point(590, 66);
+            this.flatLabel18.Name = "flatLabel18";
+            this.flatLabel18.Size = new System.Drawing.Size(149, 35);
+            this.flatLabel18.TabIndex = 92;
+            this.flatLabel18.Text = "Teammates";
+            this.flatLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatListBox1
+            // 
+            this.flatListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatListBox1.items = new string[] {
+        ""};
+            this.flatListBox1.Location = new System.Drawing.Point(581, 32);
+            this.flatListBox1.Name = "flatListBox1";
+            this.flatListBox1.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.flatListBox1.Size = new System.Drawing.Size(239, 118);
+            this.flatListBox1.TabIndex = 91;
+            this.flatListBox1.Text = "flatListBox1";
+            // 
+            // TeamESPColorBtn
+            // 
+            this.TeamESPColorBtn.Location = new System.Drawing.Point(460, 65);
+            this.TeamESPColorBtn.Name = "TeamESPColorBtn";
+            this.TeamESPColorBtn.Size = new System.Drawing.Size(66, 35);
+            this.TeamESPColorBtn.TabIndex = 90;
+            this.TeamESPColorBtn.UseVisualStyleBackColor = true;
+            this.TeamESPColorBtn.Click += new System.EventHandler(this.TeamESPColorBtn_Click);
+            // 
+            // flatLabel19
+            // 
+            this.flatLabel19.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel19.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel19.ForeColor = System.Drawing.Color.White;
+            this.flatLabel19.Location = new System.Drawing.Point(305, 104);
+            this.flatLabel19.Name = "flatLabel19";
+            this.flatLabel19.Size = new System.Drawing.Size(149, 35);
+            this.flatLabel19.TabIndex = 89;
+            this.flatLabel19.Text = "Enemies";
+            this.flatLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatLabel20
+            // 
+            this.flatLabel20.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel20.ForeColor = System.Drawing.Color.White;
+            this.flatLabel20.Location = new System.Drawing.Point(305, 39);
+            this.flatLabel20.Name = "flatLabel20";
+            this.flatLabel20.Size = new System.Drawing.Size(221, 23);
+            this.flatLabel20.TabIndex = 88;
+            this.flatLabel20.Text = "ESP Colors";
+            this.flatLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // EnemyESPColorBtn
+            // 
+            this.EnemyESPColorBtn.Location = new System.Drawing.Point(460, 104);
+            this.EnemyESPColorBtn.Name = "EnemyESPColorBtn";
+            this.EnemyESPColorBtn.Size = new System.Drawing.Size(66, 35);
+            this.EnemyESPColorBtn.TabIndex = 87;
+            this.EnemyESPColorBtn.UseVisualStyleBackColor = true;
+            this.EnemyESPColorBtn.Click += new System.EventHandler(this.EnemyESPColorBtn_Click);
+            // 
+            // flatLabel21
+            // 
+            this.flatLabel21.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel21.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel21.ForeColor = System.Drawing.Color.White;
+            this.flatLabel21.Location = new System.Drawing.Point(305, 66);
+            this.flatLabel21.Name = "flatLabel21";
+            this.flatLabel21.Size = new System.Drawing.Size(149, 35);
+            this.flatLabel21.TabIndex = 86;
+            this.flatLabel21.Text = "Teammates";
+            this.flatLabel21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatListBox2
+            // 
+            this.flatListBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatListBox2.items = new string[] {
+        ""};
+            this.flatListBox2.Location = new System.Drawing.Point(296, 32);
+            this.flatListBox2.Name = "flatListBox2";
+            this.flatListBox2.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.flatListBox2.Size = new System.Drawing.Size(239, 118);
+            this.flatListBox2.TabIndex = 85;
+            this.flatListBox2.Text = "flatListBox2";
+            // 
+            // EnemyGlowColorBtn
+            // 
+            this.EnemyGlowColorBtn.Location = new System.Drawing.Point(174, 104);
+            this.EnemyGlowColorBtn.Name = "EnemyGlowColorBtn";
+            this.EnemyGlowColorBtn.Size = new System.Drawing.Size(65, 35);
+            this.EnemyGlowColorBtn.TabIndex = 79;
+            this.EnemyGlowColorBtn.UseVisualStyleBackColor = true;
+            this.EnemyGlowColorBtn.Click += new System.EventHandler(this.EnemyGlowColorBtn_Click);
+            // 
+            // TeamGlowColorBtn
+            // 
+            this.TeamGlowColorBtn.Location = new System.Drawing.Point(174, 66);
+            this.TeamGlowColorBtn.Name = "TeamGlowColorBtn";
+            this.TeamGlowColorBtn.Size = new System.Drawing.Size(64, 36);
+            this.TeamGlowColorBtn.TabIndex = 84;
+            this.TeamGlowColorBtn.UseVisualStyleBackColor = true;
+            this.TeamGlowColorBtn.Click += new System.EventHandler(this.TeamGlowColorBtn_Click);
+            // 
+            // flatLabel22
+            // 
+            this.flatLabel22.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel22.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel22.ForeColor = System.Drawing.Color.White;
+            this.flatLabel22.Location = new System.Drawing.Point(19, 104);
+            this.flatLabel22.Name = "flatLabel22";
+            this.flatLabel22.Size = new System.Drawing.Size(149, 35);
+            this.flatLabel22.TabIndex = 83;
+            this.flatLabel22.Text = "Enemies";
+            this.flatLabel22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatLabel36
+            // 
+            this.flatLabel36.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel36.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel36.ForeColor = System.Drawing.Color.White;
+            this.flatLabel36.Location = new System.Drawing.Point(19, 39);
+            this.flatLabel36.Name = "flatLabel36";
+            this.flatLabel36.Size = new System.Drawing.Size(221, 23);
+            this.flatLabel36.TabIndex = 82;
+            this.flatLabel36.Text = "Glow Colors";
+            this.flatLabel36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatLabel37
+            // 
+            this.flatLabel37.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel37.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel37.ForeColor = System.Drawing.Color.White;
+            this.flatLabel37.Location = new System.Drawing.Point(19, 66);
+            this.flatLabel37.Name = "flatLabel37";
+            this.flatLabel37.Size = new System.Drawing.Size(149, 35);
+            this.flatLabel37.TabIndex = 81;
+            this.flatLabel37.Text = "Teammates";
+            this.flatLabel37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatListBox6
+            // 
+            this.flatListBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatListBox6.items = new string[] {
+        ""};
+            this.flatListBox6.Location = new System.Drawing.Point(9, 32);
+            this.flatListBox6.Name = "flatListBox6";
+            this.flatListBox6.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.flatListBox6.Size = new System.Drawing.Size(239, 116);
+            this.flatListBox6.TabIndex = 80;
+            this.flatListBox6.Text = "flatListBox6";
+            // 
+            // FovCircleBtn
+            // 
+            this.FovCircleBtn.Location = new System.Drawing.Point(745, 238);
+            this.FovCircleBtn.Name = "FovCircleBtn";
+            this.FovCircleBtn.Size = new System.Drawing.Size(66, 35);
+            this.FovCircleBtn.TabIndex = 78;
+            this.FovCircleBtn.UseVisualStyleBackColor = true;
+            this.FovCircleBtn.Click += new System.EventHandler(this.FovCircleBtn_Click);
+            // 
+            // flatLabel41
+            // 
+            this.flatLabel41.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel41.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel41.ForeColor = System.Drawing.Color.White;
+            this.flatLabel41.Location = new System.Drawing.Point(590, 238);
+            this.flatLabel41.Name = "flatLabel41";
+            this.flatLabel41.Size = new System.Drawing.Size(149, 35);
+            this.flatLabel41.TabIndex = 77;
+            this.flatLabel41.Text = "FOV Circle";
+            this.flatLabel41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatLabel42
+            // 
+            this.flatLabel42.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel42.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel42.ForeColor = System.Drawing.Color.White;
+            this.flatLabel42.Location = new System.Drawing.Point(590, 173);
+            this.flatLabel42.Name = "flatLabel42";
+            this.flatLabel42.Size = new System.Drawing.Size(221, 23);
+            this.flatLabel42.TabIndex = 76;
+            this.flatLabel42.Text = "Misc Colors";
+            this.flatLabel42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CrosshairBtn
+            // 
+            this.CrosshairBtn.Location = new System.Drawing.Point(745, 200);
+            this.CrosshairBtn.Name = "CrosshairBtn";
+            this.CrosshairBtn.Size = new System.Drawing.Size(66, 35);
+            this.CrosshairBtn.TabIndex = 75;
+            this.CrosshairBtn.UseVisualStyleBackColor = true;
+            this.CrosshairBtn.Click += new System.EventHandler(this.CrosshairBtn_Click);
+            // 
+            // flatLabel43
+            // 
+            this.flatLabel43.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel43.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel43.ForeColor = System.Drawing.Color.White;
+            this.flatLabel43.Location = new System.Drawing.Point(590, 200);
+            this.flatLabel43.Name = "flatLabel43";
+            this.flatLabel43.Size = new System.Drawing.Size(149, 35);
+            this.flatLabel43.TabIndex = 74;
+            this.flatLabel43.Text = "Crosshair";
+            this.flatLabel43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatListBox8
+            // 
+            this.flatListBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatListBox8.items = new string[] {
+        ""};
+            this.flatListBox8.Location = new System.Drawing.Point(581, 166);
+            this.flatListBox8.Name = "flatListBox8";
+            this.flatListBox8.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.flatListBox8.Size = new System.Drawing.Size(239, 118);
+            this.flatListBox8.TabIndex = 73;
+            this.flatListBox8.Text = "flatListBox8";
+            // 
+            // EnemyLabelBtn
+            // 
+            this.EnemyLabelBtn.Location = new System.Drawing.Point(460, 238);
+            this.EnemyLabelBtn.Name = "EnemyLabelBtn";
+            this.EnemyLabelBtn.Size = new System.Drawing.Size(66, 35);
+            this.EnemyLabelBtn.TabIndex = 72;
+            this.EnemyLabelBtn.UseVisualStyleBackColor = true;
+            this.EnemyLabelBtn.Click += new System.EventHandler(this.EnemyLabelBtn_Click);
+            // 
+            // flatLabel38
+            // 
+            this.flatLabel38.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel38.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel38.ForeColor = System.Drawing.Color.White;
+            this.flatLabel38.Location = new System.Drawing.Point(305, 238);
+            this.flatLabel38.Name = "flatLabel38";
+            this.flatLabel38.Size = new System.Drawing.Size(149, 35);
+            this.flatLabel38.TabIndex = 71;
+            this.flatLabel38.Text = "Enemies";
+            this.flatLabel38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatLabel39
+            // 
+            this.flatLabel39.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel39.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel39.ForeColor = System.Drawing.Color.White;
+            this.flatLabel39.Location = new System.Drawing.Point(305, 173);
+            this.flatLabel39.Name = "flatLabel39";
+            this.flatLabel39.Size = new System.Drawing.Size(221, 23);
+            this.flatLabel39.TabIndex = 70;
+            this.flatLabel39.Text = "Label Colors";
+            this.flatLabel39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // TeamLabelBtn
+            // 
+            this.TeamLabelBtn.Location = new System.Drawing.Point(460, 200);
+            this.TeamLabelBtn.Name = "TeamLabelBtn";
+            this.TeamLabelBtn.Size = new System.Drawing.Size(66, 35);
+            this.TeamLabelBtn.TabIndex = 69;
+            this.TeamLabelBtn.UseVisualStyleBackColor = true;
+            this.TeamLabelBtn.Click += new System.EventHandler(this.TeamLabelBtn_Click);
+            // 
+            // flatLabel40
+            // 
+            this.flatLabel40.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel40.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel40.ForeColor = System.Drawing.Color.White;
+            this.flatLabel40.Location = new System.Drawing.Point(305, 200);
+            this.flatLabel40.Name = "flatLabel40";
+            this.flatLabel40.Size = new System.Drawing.Size(149, 35);
+            this.flatLabel40.TabIndex = 68;
+            this.flatLabel40.Text = "Teammates";
+            this.flatLabel40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatListBox7
+            // 
+            this.flatListBox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatListBox7.items = new string[] {
+        ""};
+            this.flatListBox7.Location = new System.Drawing.Point(296, 166);
+            this.flatListBox7.Name = "flatListBox7";
+            this.flatListBox7.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.flatListBox7.Size = new System.Drawing.Size(239, 118);
+            this.flatListBox7.TabIndex = 67;
+            this.flatListBox7.Text = "flatListBox7";
+            // 
+            // TeamChamBtn
+            // 
+            this.TeamChamBtn.Location = new System.Drawing.Point(174, 200);
+            this.TeamChamBtn.Name = "TeamChamBtn";
+            this.TeamChamBtn.Size = new System.Drawing.Size(64, 36);
+            this.TeamChamBtn.TabIndex = 54;
+            this.TeamChamBtn.UseVisualStyleBackColor = true;
+            this.TeamChamBtn.Click += new System.EventHandler(this.TeamChamBtn_Click);
+            // 
+            // flatLabel9
+            // 
+            this.flatLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel9.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel9.ForeColor = System.Drawing.Color.White;
+            this.flatLabel9.Location = new System.Drawing.Point(19, 238);
+            this.flatLabel9.Name = "flatLabel9";
+            this.flatLabel9.Size = new System.Drawing.Size(149, 35);
+            this.flatLabel9.TabIndex = 53;
+            this.flatLabel9.Text = "Enemies";
+            this.flatLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatLabel13
+            // 
+            this.flatLabel13.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel13.ForeColor = System.Drawing.Color.White;
+            this.flatLabel13.Location = new System.Drawing.Point(19, 173);
+            this.flatLabel13.Name = "flatLabel13";
+            this.flatLabel13.Size = new System.Drawing.Size(221, 23);
+            this.flatLabel13.TabIndex = 52;
+            this.flatLabel13.Text = "Chams Colors";
+            this.flatLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatLabel17
+            // 
+            this.flatLabel17.BackColor = System.Drawing.Color.Transparent;
+            this.flatLabel17.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flatLabel17.ForeColor = System.Drawing.Color.White;
+            this.flatLabel17.Location = new System.Drawing.Point(19, 200);
+            this.flatLabel17.Name = "flatLabel17";
+            this.flatLabel17.Size = new System.Drawing.Size(149, 35);
+            this.flatLabel17.TabIndex = 50;
+            this.flatLabel17.Text = "Teammates";
+            this.flatLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flatListBox5
+            // 
+            this.flatListBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(47)))), ((int)(((byte)(49)))));
+            this.flatListBox5.items = new string[] {
+        ""};
+            this.flatListBox5.Location = new System.Drawing.Point(9, 166);
+            this.flatListBox5.Name = "flatListBox5";
+            this.flatListBox5.SelectedColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(168)))), ((int)(((byte)(109)))));
+            this.flatListBox5.Size = new System.Drawing.Size(239, 116);
+            this.flatListBox5.TabIndex = 49;
+            this.flatListBox5.Text = "flatListBox5";
             // 
             // tabPage4
             // 
@@ -1036,39 +1705,6 @@
             this.MiscToggle.TabIndex = 9;
             this.MiscToggle.Text = "flatToggle2";
             // 
-            // delay
-            // 
-            this.delay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.delay.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.delay.ForeColor = System.Drawing.SystemColors.Window;
-            this.delay.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.delay.Location = new System.Drawing.Point(8, 176);
-            this.delay.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.delay.Name = "delay";
-            this.delay.Size = new System.Drawing.Size(74, 21);
-            this.delay.TabIndex = 18;
-            this.delay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // flatLabel2
-            // 
-            this.flatLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.flatLabel2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flatLabel2.ForeColor = System.Drawing.Color.White;
-            this.flatLabel2.Location = new System.Drawing.Point(88, 166);
-            this.flatLabel2.Name = "flatLabel2";
-            this.flatLabel2.Size = new System.Drawing.Size(208, 36);
-            this.flatLabel2.TabIndex = 17;
-            this.flatLabel2.Text = "Shot Delay";
-            this.flatLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1084,11 +1720,13 @@
             this.Load += new System.EventHandler(this.Menu_Load);
             this.formSkin1.ResumeLayout(false);
             this.flatTabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Firerate)).EndInit();
-            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.delay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Firerate)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1101,46 +1739,57 @@
         private FlatUI.FlatButton HideButton;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private FlatUI.FlatTabControl flatTabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button ChamBomberBtn;
-        private FlatUI.FlatLabel flatLabel19;
-        private System.Windows.Forms.Button EnemyChamBtn;
-        private FlatUI.FlatLabel flatLabel21;
-        private System.Windows.Forms.Button TeamChamBtn;
-        private FlatUI.FlatLabel flatLabel22;
-        private System.Windows.Forms.Button BomberGlowBtn;
-        private FlatUI.FlatLabel flatLabel17;
-        private System.Windows.Forms.Button EnemyGlowColorBtn;
-        private FlatUI.FlatLabel flatLabel16;
-        private FlatUI.FlatLabel flatLabel18;
-        private FlatUI.FlatListBox flatListBox2;
-        private FlatUI.FlatLabel flatLabel20;
-        private System.Windows.Forms.Button TeamGlowColorBtn;
-        private FlatUI.FlatLabel flatLabel15;
-        private FlatUI.FlatLabel flatLabel12;
-        private FlatUI.FlatToggle ChamHealth;
-        private FlatUI.FlatLabel flatLabel13;
-        private FlatUI.FlatToggle ChamBomber;
-        private FlatUI.FlatLabel flatLabel14;
-        private FlatUI.FlatToggle ChamTeam;
-        private MonoFlat.MonoFlat_Separator monoFlat_Separator5;
+        private System.Windows.Forms.TabPage tabPage5;
         private FlatUI.FlatLabel flatLabel11;
         private FlatUI.FlatToggle ChamsToggle;
+        private FlatUI.FlatLabel flatLabel12;
+        private FlatUI.FlatLabel flatLabel14;
+        private FlatUI.FlatToggle ChamHealth;
+        private FlatUI.FlatToggle ChamTeam;
+        private MonoFlat.MonoFlat_Separator monoFlat_Separator10;
         private FlatUI.FlatLabel flatLabel10;
         private FlatUI.FlatToggle GlowHealth;
-        private FlatUI.FlatLabel flatLabel9;
-        private FlatUI.FlatToggle GlowBomber;
-        private FlatUI.FlatListBox flatListBox1;
         private FlatUI.FlatLabel flatLabel5;
         private FlatUI.FlatToggle GlowTeam;
+        private MonoFlat.MonoFlat_Separator monoFlat_Separator9;
+        private FlatUI.FlatLabel flatLabel35;
+        private FlatUI.FlatToggle OtherVisualsCheck;
         private FlatUI.FlatLabel flatLabel1;
-        private MonoFlat.MonoFlat_Separator monoFlat_Separator1;
         private FlatUI.FlatToggle GlowToggle;
+        private FlatUI.FlatListBox flatListBox4;
+        private FlatUI.FlatLabel flatLabel33;
+        private FlatUI.FlatToggle Labels;
+        private FlatUI.FlatLabel flatLabel34;
+        private MonoFlat.MonoFlat_Separator monoFlat_Separator8;
+        private FlatUI.FlatToggle TracersTeam;
+        private FlatUI.FlatLabel flatLabel31;
+        private FlatUI.FlatToggle Tracers;
+        private FlatUI.FlatLabel flatLabel32;
+        private MonoFlat.MonoFlat_Separator monoFlat_Separator7;
+        private FlatUI.FlatToggle ESPTeam;
+        private FlatUI.FlatLabel flatLabel30;
+        private FlatUI.FlatToggle BoxESPCheck;
+        private FlatUI.FlatLabel flatLabel29;
+        private FlatUI.FlatLabel flatLabel28;
+        private FlatUI.FlatToggle flatToggle1;
+        private MonoFlat.MonoFlat_Separator monoFlat_Separator2;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.NumericUpDown delay;
+        private FlatUI.FlatLabel flatLabel2;
+        private System.Windows.Forms.NumericUpDown Firerate;
+        private FlatUI.FlatLabel flatLabel27;
+        private FlatUI.FlatLabel flatLabel26;
+        private FlatUI.FlatToggle OnlyScoped;
+        private FlatUI.FlatLabel flatLabel24;
+        private FlatUI.FlatToggle OnlyNotMoving;
         private FlatUI.FlatLabel flatLabel3;
         private MonoFlat.MonoFlat_Separator monoFlat_Separator3;
         private FlatUI.FlatToggle TriggerbotToggle;
+        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage4;
+        private FlatUI.FlatLabel CurConfig;
+        private FlatUI.FlatButton SaveBtn;
+        private FlatUI.FlatButton UpdateBtn;
         private FlatUI.FlatListBox flatListBox3;
         private FlatUI.FlatLabel flatLabel25;
         private FlatUI.FlatButton CreateConfig;
@@ -1157,17 +1806,53 @@
         private FlatUI.FlatLabel flatLabel4;
         private MonoFlat.MonoFlat_Separator monoFlat_Separator4;
         private FlatUI.FlatToggle MiscToggle;
-        private FlatUI.FlatButton UpdateBtn;
-        private FlatUI.FlatButton SaveBtn;
-        private FlatUI.FlatLabel CurConfig;
-        private FlatUI.FlatToggle OnlyScoped;
-        private FlatUI.FlatLabel flatLabel24;
-        private FlatUI.FlatToggle OnlyNotMoving;
-        private FlatUI.FlatLabel flatLabel26;
-        private FlatUI.FlatLabel flatLabel27;
-        private System.Windows.Forms.NumericUpDown Firerate;
-        private System.Windows.Forms.NumericUpDown delay;
-        private FlatUI.FlatLabel flatLabel2;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button EnemyTracerBtn;
+        private FlatUI.FlatLabel flatLabel15;
+        private FlatUI.FlatLabel flatLabel16;
+        private System.Windows.Forms.Button TeamTracerBtn;
+        private FlatUI.FlatLabel flatLabel18;
+        private FlatUI.FlatListBox flatListBox1;
+        private System.Windows.Forms.Button TeamESPColorBtn;
+        private FlatUI.FlatLabel flatLabel19;
+        private FlatUI.FlatLabel flatLabel20;
+        private System.Windows.Forms.Button EnemyESPColorBtn;
+        private FlatUI.FlatLabel flatLabel21;
+        private FlatUI.FlatListBox flatListBox2;
+        private System.Windows.Forms.Button EnemyGlowColorBtn;
+        private System.Windows.Forms.Button TeamGlowColorBtn;
+        private FlatUI.FlatLabel flatLabel22;
+        private FlatUI.FlatLabel flatLabel36;
+        private FlatUI.FlatLabel flatLabel37;
+        private FlatUI.FlatListBox flatListBox6;
+        private System.Windows.Forms.Button FovCircleBtn;
+        private FlatUI.FlatLabel flatLabel41;
+        private FlatUI.FlatLabel flatLabel42;
+        private System.Windows.Forms.Button CrosshairBtn;
+        private FlatUI.FlatLabel flatLabel43;
+        private FlatUI.FlatListBox flatListBox8;
+        private System.Windows.Forms.Button EnemyLabelBtn;
+        private FlatUI.FlatLabel flatLabel38;
+        private FlatUI.FlatLabel flatLabel39;
+        private System.Windows.Forms.Button TeamLabelBtn;
+        private FlatUI.FlatLabel flatLabel40;
+        private FlatUI.FlatListBox flatListBox7;
+        private System.Windows.Forms.Button TeamChamBtn;
+        private FlatUI.FlatLabel flatLabel9;
+        private FlatUI.FlatLabel flatLabel13;
+        private FlatUI.FlatLabel flatLabel17;
+        private FlatUI.FlatListBox flatListBox5;
+        private System.Windows.Forms.Button EnemyChamBtn;
+        private FlatUI.FlatToggle TeamLabels;
+        private FlatUI.FlatLabel flatLabel44;
+        private MonoFlat.MonoFlat_Separator monoFlat_Separator1;
+        private FlatUI.FlatToggle Aimbot;
+        private FlatUI.FlatToggle ShowFOVCrosshair;
+        private FlatUI.FlatLabel sdasd;
+        private FlatUI.FlatTrackBar flatTrackBar1;
+        private FlatUI.FlatLabel flatLabel45;
+        private FlatUI.FlatToggle recoilcircle;
+        private FlatUI.FlatLabel flatLabel46;
     }
 }
 

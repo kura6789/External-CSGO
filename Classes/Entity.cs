@@ -11,7 +11,7 @@ namespace Binjector.Classes
 {
     public class Entity
     {
-        int EntityBase;
+        public int EntityBase;
 
         public Entity(int Base)
         {
